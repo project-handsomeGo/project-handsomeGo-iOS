@@ -70,14 +70,46 @@
 		CB564D7F213EB1D400E54961 /* HandsomeGo */ = {
 			isa = PBXGroup;
 			children = (
+				CB564D93213EBEED00E54961 /* SEEUN */,
 				CB564D80213EB1D400E54961 /* AppDelegate.swift */,
-				CB564D82213EB1D400E54961 /* ViewController.swift */,
-				CB564D84213EB1D400E54961 /* Main.storyboard */,
 				CB564D87213EB1E000E54961 /* Assets.xcassets */,
 				CB564D89213EB1E000E54961 /* LaunchScreen.storyboard */,
 				CB564D8C213EB1E000E54961 /* Info.plist */,
 			);
 			path = HandsomeGo;
+			sourceTree = "<group>";
+		};
+		CB564D92213EBE6D00E54961 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CB564D84213EB1D400E54961 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		CB564D93213EBEED00E54961 /* SEEUN */ = {
+			isa = PBXGroup;
+			children = (
+				CB564D95213EBF8E00E54961 /* Views */,
+				CB564D94213EBEFB00E54961 /* ViewControllers */,
+				CB564D92213EBE6D00E54961 /* Storyboard */,
+			);
+			path = SEEUN;
+			sourceTree = "<group>";
+		};
+		CB564D94213EBEFB00E54961 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB564D82213EB1D400E54961 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CB564D95213EBF8E00E54961 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F160A503D70F6DC111BD7FF6 /* Frameworks */ = {
