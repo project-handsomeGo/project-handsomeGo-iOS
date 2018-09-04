@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		437EB87D3DE4377A6BCD9282 /* Pods_HandsomeGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E294C07B4C757A06343C5F /* Pods_HandsomeGo.framework */; };
 		CB564D81213EB1D400E54961 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D80213EB1D400E54961 /* AppDelegate.swift */; };
 		CB564D83213EB1D400E54961 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D82213EB1D400E54961 /* ViewController.swift */; };
 		CB564D86213EB1D400E54961 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB564D84213EB1D400E54961 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		045836E2E9F8C71632765EDA /* Pods-HandsomeGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandsomeGo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HandsomeGo/Pods-HandsomeGo.debug.xcconfig"; sourceTree = "<group>"; };
+		279487331DB3AAD17BB8D3DE /* Pods-HandsomeGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandsomeGo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HandsomeGo/Pods-HandsomeGo.release.xcconfig"; sourceTree = "<group>"; };
+		58E294C07B4C757A06343C5F /* Pods_HandsomeGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HandsomeGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB564D7D213EB1D400E54961 /* HandsomeGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandsomeGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB564D80213EB1D400E54961 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB564D82213EB1D400E54961 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				437EB87D3DE4377A6BCD9282 /* Pods_HandsomeGo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D04C1BC95FD315E26B9279C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				045836E2E9F8C71632765EDA /* Pods-HandsomeGo.debug.xcconfig */,
+				279487331DB3AAD17BB8D3DE /* Pods-HandsomeGo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CB564D74213EB1D300E54961 = {
 			isa = PBXGroup;
 			children = (
 				CB564D7F213EB1D400E54961 /* HandsomeGo */,
 				CB564D7E213EB1D400E54961 /* Products */,
+				3D04C1BC95FD315E26B9279C /* Pods */,
+				F160A503D70F6DC111BD7FF6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = HandsomeGo;
 			sourceTree = "<group>";
 		};
+		F160A503D70F6DC111BD7FF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58E294C07B4C757A06343C5F /* Pods_HandsomeGo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB564D8F213EB1E000E54961 /* Build configuration list for PBXNativeTarget "HandsomeGo" */;
 			buildPhases = (
+				F6B87030BDF975918FD972B2 /* [CP] Check Pods Manifest.lock */,
 				CB564D79213EB1D400E54961 /* Sources */,
 				CB564D7A213EB1D400E54961 /* Frameworks */,
 				CB564D7B213EB1D400E54961 /* Resources */,
+				C30D1C87118E6638ED7EB4AD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C30D1C87118E6638ED7EB4AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HandsomeGo/Pods-HandsomeGo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HandsomeGo/Pods-HandsomeGo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6B87030BDF975918FD972B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HandsomeGo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CB564D79213EB1D400E54961 /* Sources */ = {
@@ -278,6 +347,7 @@
 		};
 		CB564D90213EB1E000E54961 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 045836E2E9F8C71632765EDA /* Pods-HandsomeGo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +365,7 @@
 		};
 		CB564D91213EB1E000E54961 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 279487331DB3AAD17BB8D3DE /* Pods-HandsomeGo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
