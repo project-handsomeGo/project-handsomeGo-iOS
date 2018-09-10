@@ -13,6 +13,11 @@
 		CB564D86213EB1D400E54961 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB564D84213EB1D400E54961 /* Main.storyboard */; };
 		CB564D88213EB1E000E54961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB564D87213EB1E000E54961 /* Assets.xcassets */; };
 		CB564D8B213EB1E000E54961 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB564D89213EB1E000E54961 /* LaunchScreen.storyboard */; };
+		CB564D97213ECCC200E54961 /* QRcodeTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D96213ECCC200E54961 /* QRcodeTabVC.swift */; };
+		CB564D99213ECCDF00E54961 /* QRcode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB564D98213ECCDF00E54961 /* QRcode.storyboard */; };
+		CB564D9B213ECCF500E54961 /* QRcodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D9A213ECCF500E54961 /* QRcodeVC.swift */; };
+		CB564D9D214661DC00E54961 /* HomeTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D9C214661DC00E54961 /* HomeTabVC.swift */; };
+		CB564D9F2146645400E54961 /* RankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D9E2146645400E54961 /* RankCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		CB564D87213EB1E000E54961 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB564D8A213EB1E000E54961 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB564D8C213EB1E000E54961 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB564D96213ECCC200E54961 /* QRcodeTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRcodeTabVC.swift; sourceTree = "<group>"; };
+		CB564D98213ECCDF00E54961 /* QRcode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRcode.storyboard; sourceTree = "<group>"; };
+		CB564D9A213ECCF500E54961 /* QRcodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRcodeVC.swift; sourceTree = "<group>"; };
+		CB564D9C214661DC00E54961 /* HomeTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabVC.swift; sourceTree = "<group>"; };
+		CB564D9E2146645400E54961 /* RankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				CB564D84213EB1D400E54961 /* Main.storyboard */,
+				CB564D98213ECCDF00E54961 /* QRcode.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -101,6 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				CB564D82213EB1D400E54961 /* ViewController.swift */,
+				CB564D9C214661DC00E54961 /* HomeTabVC.swift */,
+				CB564D96213ECCC200E54961 /* QRcodeTabVC.swift */,
+				CB564D9A213ECCF500E54961 /* QRcodeVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -108,6 +122,7 @@
 		CB564D95213EBF8E00E54961 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CB564D9E2146645400E54961 /* RankCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +197,7 @@
 			files = (
 				CB564D8B213EB1E000E54961 /* LaunchScreen.storyboard in Resources */,
 				CB564D88213EB1E000E54961 /* Assets.xcassets in Resources */,
+				CB564D99213ECCDF00E54961 /* QRcode.storyboard in Resources */,
 				CB564D86213EB1D400E54961 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,8 +252,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB564D9B213ECCF500E54961 /* QRcodeVC.swift in Sources */,
 				CB564D83213EB1D400E54961 /* ViewController.swift in Sources */,
+				CB564D97213ECCC200E54961 /* QRcodeTabVC.swift in Sources */,
+				CB564D9D214661DC00E54961 /* HomeTabVC.swift in Sources */,
 				CB564D81213EB1D400E54961 /* AppDelegate.swift in Sources */,
+				CB564D9F2146645400E54961 /* RankCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N6JH7RBUA4;
 				INFOPLIST_FILE = HandsomeGo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -401,6 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N6JH7RBUA4;
 				INFOPLIST_FILE = HandsomeGo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
