@@ -18,6 +18,9 @@
 		CB564D9B213ECCF500E54961 /* QRcodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D9A213ECCF500E54961 /* QRcodeVC.swift */; };
 		CB564D9D214661DC00E54961 /* HomeTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D9C214661DC00E54961 /* HomeTabVC.swift */; };
 		CB564D9F2146645400E54961 /* RankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D9E2146645400E54961 /* RankCell.swift */; };
+		CB564DCA2146D4E200E54961 /* MyPageTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564DC92146D4E200E54961 /* MyPageTabVC.swift */; };
+		CB564DCE214A39A500E54961 /* NanumSquareRoundB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB564DCD214A399F00E54961 /* NanumSquareRoundB.ttf */; };
+		CB564DCF214A39A900E54961 /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB564DCC214A399A00E54961 /* NanumSquareRoundR.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		CB564D9A213ECCF500E54961 /* QRcodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRcodeVC.swift; sourceTree = "<group>"; };
 		CB564D9C214661DC00E54961 /* HomeTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabVC.swift; sourceTree = "<group>"; };
 		CB564D9E2146645400E54961 /* RankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCell.swift; sourceTree = "<group>"; };
+		CB564DC92146D4E200E54961 /* MyPageTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTabVC.swift; sourceTree = "<group>"; };
+		CB564DCC214A399A00E54961 /* NanumSquareRoundR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundR.ttf; sourceTree = "<group>"; };
+		CB564DCD214A399F00E54961 /* NanumSquareRoundB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundB.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 		CB564D7F213EB1D400E54961 /* HandsomeGo */ = {
 			isa = PBXGroup;
 			children = (
+				CB564DCB214A398900E54961 /* Fonts */,
 				CB564D93213EBEED00E54961 /* SEEUN */,
 				CB564D80213EB1D400E54961 /* AppDelegate.swift */,
 				CB564D87213EB1E000E54961 /* Assets.xcassets */,
@@ -114,6 +121,7 @@
 				CB564D82213EB1D400E54961 /* ViewController.swift */,
 				CB564D9C214661DC00E54961 /* HomeTabVC.swift */,
 				CB564D96213ECCC200E54961 /* QRcodeTabVC.swift */,
+				CB564DC92146D4E200E54961 /* MyPageTabVC.swift */,
 				CB564D9A213ECCF500E54961 /* QRcodeVC.swift */,
 			);
 			path = ViewControllers;
@@ -125,6 +133,15 @@
 				CB564D9E2146645400E54961 /* RankCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CB564DCB214A398900E54961 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CB564DCD214A399F00E54961 /* NanumSquareRoundB.ttf */,
+				CB564DCC214A399A00E54961 /* NanumSquareRoundR.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		F160A503D70F6DC111BD7FF6 /* Frameworks */ = {
@@ -199,6 +216,8 @@
 				CB564D88213EB1E000E54961 /* Assets.xcassets in Resources */,
 				CB564D99213ECCDF00E54961 /* QRcode.storyboard in Resources */,
 				CB564D86213EB1D400E54961 /* Main.storyboard in Resources */,
+				CB564DCE214A39A500E54961 /* NanumSquareRoundB.ttf in Resources */,
+				CB564DCF214A39A900E54961 /* NanumSquareRoundR.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +274,7 @@
 				CB564D9B213ECCF500E54961 /* QRcodeVC.swift in Sources */,
 				CB564D83213EB1D400E54961 /* ViewController.swift in Sources */,
 				CB564D97213ECCC200E54961 /* QRcodeTabVC.swift in Sources */,
+				CB564DCA2146D4E200E54961 /* MyPageTabVC.swift in Sources */,
 				CB564D9D214661DC00E54961 /* HomeTabVC.swift in Sources */,
 				CB564D81213EB1D400E54961 /* AppDelegate.swift in Sources */,
 				CB564D9F2146645400E54961 /* RankCell.swift in Sources */,
