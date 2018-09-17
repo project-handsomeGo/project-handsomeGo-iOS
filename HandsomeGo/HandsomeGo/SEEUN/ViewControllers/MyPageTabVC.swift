@@ -11,6 +11,12 @@ import UIKit
 class MyPageTabVC: UIViewController {
     @IBOutlet weak var infoTableView: UITableView!
     
+    var opened = false {
+        didSet {
+            infoTableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         infoTableView.dataSource = self
@@ -19,22 +25,29 @@ class MyPageTabVC: UIViewController {
 }
 
 extension MyPageTabVC:  UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        if section == 2 && opened == true {
+            return 2
+        }
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cell: UITableViewCell!
         
-        if indexPath.row == 0{
+        if indexPath.section == 0{
             cell = infoTableView.dequeueReusableCell(withIdentifier: "InfoCell") as! InfoCell
             
-        } else if indexPath.row == 1 {
+        } else if indexPath.section == 1 {
             cell = infoTableView.dequeueReusableCell(withIdentifier: "InfoChangeCell")
-        } else if indexPath.row == 2 {
+        } else if indexPath.section == 2 && indexPath.row == 0  {
             cell = infoTableView.dequeueReusableCell(withIdentifier: "StampButtonCell")
-        } else if indexPath.row == 3 {
+        } else if indexPath.section == 2 && indexPath.row == 1 {
             let listCell = infoTableView.dequeueReusableCell(withIdentifier: "StampListCell") as! StampListCell
             
             let unit = self.view.frame.width/375
@@ -56,10 +69,12 @@ extension MyPageTabVC:  UITableViewDelegate, UITableViewDataSource {
         
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 1 {
+        if indexPath.section == 1 {
            
            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileChangeVC") as! ProfileChangeVC
              self.navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.section == 2 && indexPath.row == 0 {
+            opened = !opened
         }
     }
     
