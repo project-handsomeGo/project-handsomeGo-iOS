@@ -12,6 +12,8 @@ class HomeTabVC: UIViewController {
 
     @IBOutlet weak var mapBtn: UIButton!
     @IBOutlet weak var rankBtn: UIButton!
+    @IBOutlet weak var mapUnderBar: UIView!
+    @IBOutlet weak var rankUnderBar: UIView!
     
     @IBOutlet weak var rankView: UIView!
     @IBOutlet weak var imageView: UIImageView!
@@ -19,10 +21,32 @@ class HomeTabVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         rankTableView.delegate = self
         rankTableView.dataSource = self
+        
+        imageView.layer.cornerRadius = 8 * self.view.frame.width/375
+        imageView.layer.masksToBounds = true
+    
+        rankUnderBar.isHidden = true
+        rankView.isHidden = true
     }
+    
+    @IBAction func mapTapAction(_ sender: UIButton) {
+        
+        rankUnderBar.isHidden = true
+        rankView.isHidden = true
+        
+    }
+    
+    @IBAction func rankTapAction(_ sender: UIButton) {
+        rankUnderBar.isHidden = false
+        rankView.isHidden = false
+        
+        
+        mapUnderBar.isHidden = true
+        // mapView.isHidden = true
+    }
+    
 }
 
 extension HomeTabVC: UITableViewDelegate, UITableViewDataSource {

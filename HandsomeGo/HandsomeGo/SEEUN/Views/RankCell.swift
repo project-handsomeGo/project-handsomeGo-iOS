@@ -12,10 +12,14 @@ class RankCell: UITableViewCell {
 
     @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var numLabel: UILabel!
+    @IBOutlet weak var rankImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        
+        rankImageView.layer.cornerRadius = 3
+        rankImageView.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

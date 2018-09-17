@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		437EB87D3DE4377A6BCD9282 /* Pods_HandsomeGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E294C07B4C757A06343C5F /* Pods_HandsomeGo.framework */; };
+		CB056815214B98BC00323BFF /* StampCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB056814214B98BC00323BFF /* StampCell.swift */; };
+		CB056824214BA7CE00323BFF /* NanumSquareOTFRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB056821214BA7CA00323BFF /* NanumSquareOTFRegular.otf */; };
+		CB056825214BA7CE00323BFF /* NanumSquareOTFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB056822214BA7CB00323BFF /* NanumSquareOTFBold.otf */; };
+		CB056826214BA7CE00323BFF /* NanumSquareOTFExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB056823214BA7CD00323BFF /* NanumSquareOTFExtraBold.otf */; };
+		CB056828214BB61D00323BFF /* StampListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB056827214BB61D00323BFF /* StampListCell.swift */; };
+		CB05682C214BBE1000323BFF /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB05682B214BBE1000323BFF /* InfoCell.swift */; };
 		CB564D81213EB1D400E54961 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D80213EB1D400E54961 /* AppDelegate.swift */; };
 		CB564D83213EB1D400E54961 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D82213EB1D400E54961 /* ViewController.swift */; };
 		CB564D86213EB1D400E54961 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB564D84213EB1D400E54961 /* Main.storyboard */; };
@@ -19,14 +25,18 @@
 		CB564D9D214661DC00E54961 /* HomeTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D9C214661DC00E54961 /* HomeTabVC.swift */; };
 		CB564D9F2146645400E54961 /* RankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D9E2146645400E54961 /* RankCell.swift */; };
 		CB564DCA2146D4E200E54961 /* MyPageTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564DC92146D4E200E54961 /* MyPageTabVC.swift */; };
-		CB564DCE214A39A500E54961 /* NanumSquareRoundB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB564DCD214A399F00E54961 /* NanumSquareRoundB.ttf */; };
-		CB564DCF214A39A900E54961 /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB564DCC214A399A00E54961 /* NanumSquareRoundR.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		045836E2E9F8C71632765EDA /* Pods-HandsomeGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandsomeGo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HandsomeGo/Pods-HandsomeGo.debug.xcconfig"; sourceTree = "<group>"; };
 		279487331DB3AAD17BB8D3DE /* Pods-HandsomeGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandsomeGo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HandsomeGo/Pods-HandsomeGo.release.xcconfig"; sourceTree = "<group>"; };
 		58E294C07B4C757A06343C5F /* Pods_HandsomeGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HandsomeGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB056814214B98BC00323BFF /* StampCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampCell.swift; sourceTree = "<group>"; };
+		CB056821214BA7CA00323BFF /* NanumSquareOTFRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFRegular.otf; sourceTree = "<group>"; };
+		CB056822214BA7CB00323BFF /* NanumSquareOTFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFBold.otf; sourceTree = "<group>"; };
+		CB056823214BA7CD00323BFF /* NanumSquareOTFExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFExtraBold.otf; sourceTree = "<group>"; };
+		CB056827214BB61D00323BFF /* StampListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampListCell.swift; sourceTree = "<group>"; };
+		CB05682B214BBE1000323BFF /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		CB564D7D213EB1D400E54961 /* HandsomeGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandsomeGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB564D80213EB1D400E54961 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB564D82213EB1D400E54961 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,8 +50,6 @@
 		CB564D9C214661DC00E54961 /* HomeTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabVC.swift; sourceTree = "<group>"; };
 		CB564D9E2146645400E54961 /* RankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCell.swift; sourceTree = "<group>"; };
 		CB564DC92146D4E200E54961 /* MyPageTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTabVC.swift; sourceTree = "<group>"; };
-		CB564DCC214A399A00E54961 /* NanumSquareRoundR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundR.ttf; sourceTree = "<group>"; };
-		CB564DCD214A399F00E54961 /* NanumSquareRoundB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundB.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CB056818214B9BC400323BFF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CB056822214BA7CB00323BFF /* NanumSquareOTFBold.otf */,
+				CB056823214BA7CD00323BFF /* NanumSquareOTFExtraBold.otf */,
+				CB056821214BA7CA00323BFF /* NanumSquareOTFRegular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		CB564D74213EB1D300E54961 = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +104,6 @@
 		CB564D7F213EB1D400E54961 /* HandsomeGo */ = {
 			isa = PBXGroup;
 			children = (
-				CB564DCB214A398900E54961 /* Fonts */,
 				CB564D93213EBEED00E54961 /* SEEUN */,
 				CB564D80213EB1D400E54961 /* AppDelegate.swift */,
 				CB564D87213EB1E000E54961 /* Assets.xcassets */,
@@ -108,6 +125,7 @@
 		CB564D93213EBEED00E54961 /* SEEUN */ = {
 			isa = PBXGroup;
 			children = (
+				CB056818214B9BC400323BFF /* Fonts */,
 				CB564D95213EBF8E00E54961 /* Views */,
 				CB564D94213EBEFB00E54961 /* ViewControllers */,
 				CB564D92213EBE6D00E54961 /* Storyboard */,
@@ -131,17 +149,11 @@
 			isa = PBXGroup;
 			children = (
 				CB564D9E2146645400E54961 /* RankCell.swift */,
+				CB056827214BB61D00323BFF /* StampListCell.swift */,
+				CB056814214B98BC00323BFF /* StampCell.swift */,
+				CB05682B214BBE1000323BFF /* InfoCell.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		CB564DCB214A398900E54961 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				CB564DCD214A399F00E54961 /* NanumSquareRoundB.ttf */,
-				CB564DCC214A399A00E54961 /* NanumSquareRoundR.ttf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		F160A503D70F6DC111BD7FF6 /* Frameworks */ = {
@@ -214,10 +226,11 @@
 			files = (
 				CB564D8B213EB1E000E54961 /* LaunchScreen.storyboard in Resources */,
 				CB564D88213EB1E000E54961 /* Assets.xcassets in Resources */,
+				CB056824214BA7CE00323BFF /* NanumSquareOTFRegular.otf in Resources */,
+				CB056825214BA7CE00323BFF /* NanumSquareOTFBold.otf in Resources */,
 				CB564D99213ECCDF00E54961 /* QRcode.storyboard in Resources */,
+				CB056826214BA7CE00323BFF /* NanumSquareOTFExtraBold.otf in Resources */,
 				CB564D86213EB1D400E54961 /* Main.storyboard in Resources */,
-				CB564DCE214A39A500E54961 /* NanumSquareRoundB.ttf in Resources */,
-				CB564DCF214A39A900E54961 /* NanumSquareRoundR.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB056828214BB61D00323BFF /* StampListCell.swift in Sources */,
 				CB564D9B213ECCF500E54961 /* QRcodeVC.swift in Sources */,
 				CB564D83213EB1D400E54961 /* ViewController.swift in Sources */,
 				CB564D97213ECCC200E54961 /* QRcodeTabVC.swift in Sources */,
@@ -278,6 +292,8 @@
 				CB564D9D214661DC00E54961 /* HomeTabVC.swift in Sources */,
 				CB564D81213EB1D400E54961 /* AppDelegate.swift in Sources */,
 				CB564D9F2146645400E54961 /* RankCell.swift in Sources */,
+				CB056815214B98BC00323BFF /* StampCell.swift in Sources */,
+				CB05682C214BBE1000323BFF /* InfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
