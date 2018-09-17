@@ -20,7 +20,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--QR코드-->
+        <!--Rcode TabVC-->
         <scene sceneID="OPo-Ww-cKa">
             <objects>
                 <viewController id="Xjq-bc-Z93" customClass="QRcodeTabVC" customModule="HandsomeGo" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,13 +29,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xbs-c5-jFU">
-                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <rect key="frame" x="0.0" y="164" width="375" height="454"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHl-2M-5lU">
-                                        <rect key="frame" x="-224" y="0.0" width="811" height="498"/>
+                                        <rect key="frame" x="-224" y="0.0" width="811" height="454"/>
                                         <subviews>
-                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="50+남부캠퍼스" translatesAutoresizingMaskIntoConstraints="NO" id="Pzs-8L-LED">
-                                                <rect key="frame" x="0.0" y="0.0" width="811" height="498"/>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="Pzs-8L-LED">
+                                                <rect key="frame" x="0.0" y="0.0" width="811" height="454"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zn-oE-k9p">
                                                 <rect key="frame" x="8" y="273" width="46" height="30"/>
@@ -66,7 +66,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3B-dc-uTR">
-                                <rect key="frame" x="0.0" y="20" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="9ny-Z8-7I2"/>
@@ -85,7 +85,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wZP-B5-Wg2"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="QR코드" image="qrCode" id="abM-Y3-gjY"/>
+                    <navigationItem key="navigationItem" id="e6R-HK-5N1"/>
                     <connections>
                         <outlet property="parentView" destination="Xbs-c5-jFU" id="YUq-HY-LOP"/>
                         <outlet property="rightLayout" destination="tIr-ir-4ct" id="95W-Wf-hxm"/>
@@ -104,7 +104,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="221.59999999999999" y="-287.40629685157421"/>
+            <point key="canvasLocation" x="1160.8" y="-287.40629685157421"/>
         </scene>
         <!--홈-->
         <scene sceneID="TD2-zV-BYD">
@@ -184,7 +184,7 @@
                                         <rect key="frame" x="0.0" y="154" width="375" height="351"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RankCell" rowHeight="55" id="EMU-Ay-zwV" customClass="RankCell" customModule="HandsomeGo" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RankCell" rowHeight="55" id="EMU-Ay-zwV" customClass="RankCell" customModule="HandsomeGo" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="55"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EMU-Ay-zwV" id="IQZ-IR-2Gr">
@@ -346,7 +346,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="WVc-ZW-PxZ" kind="relationship" relationship="viewControllers" id="Cul-ei-FPV"/>
-                        <segue destination="Xjq-bc-Z93" kind="relationship" relationship="viewControllers" id="7EC-Zp-i47"/>
+                        <segue destination="2Y0-PH-xmJ" kind="relationship" relationship="viewControllers" id="7EC-Zp-i47"/>
                         <segue destination="UO5-cA-nDQ" kind="relationship" relationship="viewControllers" id="RZc-V0-auf"/>
                     </connections>
                 </tabBarController>
@@ -397,7 +397,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8UQ-EP-WMK">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="50+남부캠퍼스" translatesAutoresizingMaskIntoConstraints="NO" id="BO5-Ul-nn2">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="BO5-Ul-nn2">
                                                             <rect key="frame" x="144.5" y="22" width="86" height="86"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="BO5-Ul-nn2" secondAttribute="height" multiplier="1:1" id="ejU-C9-Ft2"/>
@@ -617,7 +617,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="양재혁신허브" translatesAutoresizingMaskIntoConstraints="NO" id="MwW-dG-rn0">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="MwW-dG-rn0">
                                                                         <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="MwW-dG-rn0" secondAttribute="height" multiplier="1:1" id="T0a-Vb-9eF"/>
@@ -674,11 +674,94 @@
             </objects>
             <point key="canvasLocation" x="744.79999999999995" y="515.8920539730135"/>
         </scene>
-        <!--Item-->
+        <!--프로필 수정-->
+        <scene sceneID="QDw-qb-Sjq">
+            <objects>
+                <viewController storyboardIdentifier="ProfileChangeVC" title="프로필 수정" id="4jH-Dg-Hqs" customClass="ProfileChangeVC" customModule="HandsomeGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HbA-CR-6zh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q56-0y-Tf5">
+                                <rect key="frame" x="0.0" y="20" width="375" height="195"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jjp-ul-Xnj">
+                                        <rect key="frame" x="0.0" y="194" width="375" height="1"/>
+                                        <color key="backgroundColor" red="0.83529411764705885" green="0.83529411764705885" blue="0.83529411764705885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="61c-G4-3p9"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9R5-8w-G8V">
+                                        <rect key="frame" x="144.5" y="23" width="86" height="86"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9R5-8w-G8V" secondAttribute="height" multiplier="1:1" id="pLQ-iI-WW7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9K-sv-289">
+                                        <rect key="frame" x="53" y="168" width="269" height="1"/>
+                                        <color key="backgroundColor" red="0.35686274509803922" green="0.63529411764705879" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="aEq-aa-DFr"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="박세은" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W2t-PI-pqE">
+                                        <rect key="frame" x="158" y="140" width="59" height="23"/>
+                                        <color key="textColor" red="0.2627450980392157" green="0.2627450980392157" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1g-0m-PmV">
+                                        <rect key="frame" x="200" y="79" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oht-D0-dM8">
+                                        <rect key="frame" x="292" y="136.5" width="30" height="30"/>
+                                        <state key="normal" title="edit"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jjp-ul-Xnj" secondAttribute="trailing" id="J0X-Pn-j8v"/>
+                                    <constraint firstItem="u9K-sv-289" firstAttribute="centerX" secondItem="q56-0y-Tf5" secondAttribute="centerX" id="LgY-x5-Ofj"/>
+                                    <constraint firstItem="u9K-sv-289" firstAttribute="width" secondItem="q56-0y-Tf5" secondAttribute="width" multiplier="269:375" id="RiR-QL-vTL"/>
+                                    <constraint firstItem="W2t-PI-pqE" firstAttribute="centerX" secondItem="q56-0y-Tf5" secondAttribute="centerX" id="ad4-qL-Urq"/>
+                                    <constraint firstItem="jjp-ul-Xnj" firstAttribute="leading" secondItem="q56-0y-Tf5" secondAttribute="leading" id="bb9-nB-bVJ"/>
+                                    <constraint firstItem="9R5-8w-G8V" firstAttribute="centerX" secondItem="q56-0y-Tf5" secondAttribute="centerX" id="c0Z-rj-cRv"/>
+                                    <constraint firstItem="jjp-ul-Xnj" firstAttribute="top" secondItem="u9K-sv-289" secondAttribute="bottom" constant="25" id="flq-ia-thB"/>
+                                    <constraint firstItem="oht-D0-dM8" firstAttribute="centerY" secondItem="W2t-PI-pqE" secondAttribute="centerY" id="hPR-K9-YXV"/>
+                                    <constraint firstItem="9R5-8w-G8V" firstAttribute="top" secondItem="q56-0y-Tf5" secondAttribute="top" constant="23" id="l3l-ni-ZaD"/>
+                                    <constraint firstItem="9R5-8w-G8V" firstAttribute="width" secondItem="q56-0y-Tf5" secondAttribute="width" multiplier="86:375" id="lKw-4K-kDj"/>
+                                    <constraint firstAttribute="width" secondItem="q56-0y-Tf5" secondAttribute="height" multiplier="25:13" id="nIS-eb-c4f"/>
+                                    <constraint firstItem="oht-D0-dM8" firstAttribute="trailing" secondItem="u9K-sv-289" secondAttribute="trailing" id="qCr-ll-xh4"/>
+                                    <constraint firstAttribute="bottom" secondItem="jjp-ul-Xnj" secondAttribute="bottom" id="rTt-9a-fnH"/>
+                                    <constraint firstItem="u9K-sv-289" firstAttribute="top" secondItem="W2t-PI-pqE" secondAttribute="bottom" constant="5" id="wzs-eo-JMi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="q56-0y-Tf5" firstAttribute="leading" secondItem="h9T-rl-ZQ6" secondAttribute="leading" id="PQw-uC-4Ib"/>
+                            <constraint firstItem="q56-0y-Tf5" firstAttribute="trailing" secondItem="h9T-rl-ZQ6" secondAttribute="trailing" id="X1Y-1r-Jf9"/>
+                            <constraint firstItem="q56-0y-Tf5" firstAttribute="top" secondItem="h9T-rl-ZQ6" secondAttribute="top" id="X4Y-Rt-B30"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h9T-rl-ZQ6"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameTxfd" destination="W2t-PI-pqE" id="tr9-Kl-Xy3"/>
+                        <outlet property="profileImageView" destination="9R5-8w-G8V" id="JF9-IV-2TU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lzi-pS-Rvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616.8" y="529.38530734632684"/>
+        </scene>
+        <!--마이페이지-->
         <scene sceneID="Igw-Pr-mKu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UO5-cA-nDQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="wFQ-Yj-ELx"/>
+                    <tabBarItem key="tabBarItem" title="마이페이지" id="wFQ-Yj-ELx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="acf-1N-lFY">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -693,11 +776,27 @@
             </objects>
             <point key="canvasLocation" x="-194.40000000000001" y="515.8920539730135"/>
         </scene>
+        <!--QR코드-->
+        <scene sceneID="m0k-be-saQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Y0-PH-xmJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="QR코드" id="abM-Y3-gjY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HsZ-ne-cyd">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xjq-bc-Z93" kind="relationship" relationship="rootViewController" id="t4y-0Q-bRW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXO-RL-gDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221.59999999999999" y="-287.40629685157421"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="50+남부캠퍼스" width="40" height="40"/>
         <image name="home" width="48" height="48"/>
-        <image name="qrCode" width="48" height="48"/>
-        <image name="양재혁신허브" width="40" height="40"/>
     </resources>
 </document>

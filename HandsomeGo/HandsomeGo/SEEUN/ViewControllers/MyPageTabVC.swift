@@ -55,6 +55,13 @@ extension MyPageTabVC:  UITableViewDelegate, UITableViewDataSource {
         return cell
         
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 1 {
+           
+           let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileChangeVC") as! ProfileChangeVC
+             self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
     
 }
 //

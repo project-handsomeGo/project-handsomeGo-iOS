@@ -18,8 +18,8 @@ class RankCell: UITableViewCell {
         super.awakeFromNib()
         
         
-        rankImageView.layer.cornerRadius = 3
-        rankImageView.layer.masksToBounds = true
+        colorView.layer.cornerRadius = 3
+        colorView.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

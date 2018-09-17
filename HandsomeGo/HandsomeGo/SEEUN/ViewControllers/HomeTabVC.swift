@@ -56,6 +56,7 @@ extension HomeTabVC: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = rankTableView.dequeueReusableCell(withIdentifier: "RankCell", for: indexPath) as! RankCell
+        cell.numLabel.text = "\(indexPath.row+1)"
         return cell
         
     }
