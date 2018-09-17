@@ -19,6 +19,9 @@ class ProfileChangeVC: UIViewController, UITextFieldDelegate {
         profileImageView.layer.masksToBounds = true
         
         nameTxfd.delegate = self
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

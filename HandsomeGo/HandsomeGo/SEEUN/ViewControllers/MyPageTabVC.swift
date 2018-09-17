@@ -27,7 +27,7 @@ class MyPageTabVC: UIViewController {
 extension MyPageTabVC:  UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 2 && opened == true {
@@ -63,6 +63,8 @@ extension MyPageTabVC:  UITableViewDelegate, UITableViewDataSource {
             listCell.collectionViewHeight.constant = 425*unit
             
             return listCell
+        } else if indexPath.section == 3 {
+            cell = infoTableView.dequeueReusableCell(withIdentifier: "LogoutCell")
         }
         
         return cell
