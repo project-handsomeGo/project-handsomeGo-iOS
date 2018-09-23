@@ -254,7 +254,7 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapBG" translatesAutoresizingMaskIntoConstraints="NO" id="ZRR-DH-4s8">
                                                 <rect key="frame" x="0.0" y="0.0" width="552" height="504"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNp-E8-33x">
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNp-E8-33x">
                                                 <rect key="frame" x="367" y="92.5" width="54.5" height="54.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="RNp-E8-33x" secondAttribute="height" multiplier="1:1" id="WL8-mh-nKY"/>
@@ -264,133 +264,133 @@
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="VPF-rS-89t"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZ3-1s-wpo">
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZ3-1s-wpo">
                                                 <rect key="frame" x="205.5" y="259" width="55" height="55"/>
                                                 <state key="normal" image="m_seoulChangeob"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="Q4j-XF-zdw"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAA-8W-jmf">
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAA-8W-jmf">
                                                 <rect key="frame" x="152.5" y="276" width="55" height="55"/>
                                                 <state key="normal" image="m_hangangPark"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="AVM-mC-WUy"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1u-30-iDC">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1u-30-iDC">
                                                 <rect key="frame" x="214.5" y="311" width="55" height="55"/>
                                                 <state key="normal" image="m_yeouidoUnder"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="vVJ-qW-mpv"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQ6-v4-oE8">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQ6-v4-oE8">
                                                 <rect key="frame" x="111" y="311" width="54.5" height="55"/>
                                                 <state key="normal" image="m_nambuCampus"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="KPF-uI-yed"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d67-qC-iHw">
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d67-qC-iHw">
                                                 <rect key="frame" x="236.5" y="215" width="55" height="55"/>
                                                 <state key="normal" image="m_seoulLo7017"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="2lP-MX-DBi"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTw-7h-2hY">
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTw-7h-2hY">
                                                 <rect key="frame" x="389" y="243.5" width="55" height="55"/>
                                                 <state key="normal" image="m_bioHub"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="S4Y-R4-u3Z"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjs-41-gtA">
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjs-41-gtA">
                                                 <rect key="frame" x="291.5" y="232.5" width="55" height="55"/>
                                                 <state key="normal" image="m_carIndustry"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="mUX-Ve-7na"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8V-yO-j9j">
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8V-yO-j9j">
                                                 <rect key="frame" x="331" y="285.5" width="54.5" height="55"/>
                                                 <state key="normal" image="m_newUseScience"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="FO1-nU-HkN"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ci-Mv-Gva">
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ci-Mv-Gva">
                                                 <rect key="frame" x="345.5" y="407" width="54.5" height="55"/>
                                                 <state key="normal" image="m_ yangjaeRCD"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="Z3B-ie-vW2"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe1-N2-JY0">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe1-N2-JY0">
                                                 <rect key="frame" x="384" y="147.5" width="55" height="55"/>
                                                 <state key="normal" image="m_bongjeHistoryCenter"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="9l0-ZM-U9n"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMW-U1-6HM">
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMW-U1-6HM">
                                                 <rect key="frame" x="257" y="144" width="55" height="55"/>
                                                 <state key="normal" image="m_againSewoon"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="CWO-A4-er2"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSA-5n-flb">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSA-5n-flb">
                                                 <rect key="frame" x="178.5" y="212.5" width="55" height="55"/>
                                                 <state key="normal" image="m_cultureReserve"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="33t-0c-Dvi"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1s6-Gb-zcJ">
+                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1s6-Gb-zcJ">
                                                 <rect key="frame" x="210.5" y="169.5" width="55" height="55"/>
                                                 <state key="normal" image="m_ donuimun"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="8mp-kT-rlG"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YZ-Zx-6eB">
+                                            <button opaque="NO" tag="19" contentMode="scaleToFill" semanticContentAttribute="playback" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YZ-Zx-6eB">
                                                 <rect key="frame" x="340.5" y="232.5" width="54.5" height="55"/>
                                                 <state key="normal" image="m_cityBiennale"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="CnZ-1q-GlG"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x73-0k-hh3">
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x73-0k-hh3">
                                                 <rect key="frame" x="64.5" y="219.5" width="55" height="55"/>
                                                 <state key="normal" image="m_seoulGarden"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="EEB-GF-Mqb"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lix-k0-Qyx">
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lix-k0-Qyx">
                                                 <rect key="frame" x="340.5" y="180.5" width="54.5" height="55"/>
                                                 <state key="normal" image="m_sewerScience"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="PL7-wg-TEV"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ka-n1-Cld">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ka-n1-Cld">
                                                 <rect key="frame" x="317.5" y="121" width="55" height="54.5"/>
                                                 <state key="normal" image="m_gyeongChun"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="goc-Bb-jta"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZ6-F2-z0c">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZ6-F2-z0c">
                                                 <rect key="frame" x="290" y="182.5" width="55" height="55"/>
                                                 <state key="normal" image="m_ deogsugung"/>
                                                 <connections>
                                                     <action selector="mapIconTapAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="GSe-rz-XXG"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2E-VX-LML">
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2E-VX-LML">
                                                 <rect key="frame" x="169.5" y="135" width="55" height="55"/>
                                                 <state key="normal" image="m_innovationPark"/>
                                                 <connections>
@@ -499,25 +499,25 @@
                                 <rect key="frame" x="15" y="500" width="345" height="103"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m_seoulChangeob" translatesAutoresizingMaskIntoConstraints="NO" id="XpO-Wx-S8P">
-                                        <rect key="frame" x="15" y="25.5" width="52" height="52.5"/>
+                                        <rect key="frame" x="10" y="11.5" width="80" height="80.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="XpO-Wx-S8P" secondAttribute="height" multiplier="1:1" id="Rlm-tt-iZN"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울창업허브" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AMz-8D-p87">
-                                        <rect key="frame" x="79" y="16.5" width="82" height="17"/>
+                                        <rect key="frame" x="98" y="17.5" width="82" height="17"/>
                                         <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="15"/>
                                         <color key="textColor" red="0.2627450980392157" green="0.2627450980392157" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울특별시 마포구 공덕동 370-4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m1X-Yy-qV0">
-                                        <rect key="frame" x="79" y="42" width="163" height="13.5"/>
+                                        <rect key="frame" x="98" y="42" width="163" height="13.5"/>
                                         <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="12"/>
                                         <color key="textColor" red="0.2627450980392157" green="0.2627450980392157" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCl-WJ-tzM">
-                                        <rect key="frame" x="237" y="63.5" width="90" height="25.5"/>
+                                        <rect key="frame" x="237" y="61" width="90" height="25.5"/>
                                         <color key="backgroundColor" red="0.45490196078431372" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="uCl-WJ-tzM" secondAttribute="height" multiplier="95:27" id="okV-PS-yLa"/>
@@ -528,7 +528,7 @@
                                         </state>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qsL-pY-GQj">
-                                        <rect key="frame" x="79" y="66" width="120" height="20"/>
+                                        <rect key="frame" x="98" y="63.5" width="120" height="20"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starYellow" translatesAutoresizingMaskIntoConstraints="NO" id="y5z-HU-3z7">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -554,19 +554,19 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="m1X-Yy-qV0" firstAttribute="leading" secondItem="AMz-8D-p87" secondAttribute="leading" id="2Tj-ve-FIj"/>
-                                    <constraint firstItem="XpO-Wx-S8P" firstAttribute="width" secondItem="W5Z-Qj-T6a" secondAttribute="width" multiplier="52:345" id="6kn-je-sLi"/>
+                                    <constraint firstItem="XpO-Wx-S8P" firstAttribute="width" secondItem="W5Z-Qj-T6a" secondAttribute="width" multiplier="80:345" id="6kn-je-sLi"/>
+                                    <constraint firstItem="qsL-pY-GQj" firstAttribute="centerY" secondItem="W5Z-Qj-T6a" secondAttribute="centerY" multiplier="1:0.7" id="95R-pP-HEd"/>
                                     <constraint firstItem="y5z-HU-3z7" firstAttribute="width" secondItem="W5Z-Qj-T6a" secondAttribute="width" multiplier="20:346" id="Bzy-rf-13F"/>
-                                    <constraint firstItem="qsL-pY-GQj" firstAttribute="bottom" secondItem="XpO-Wx-S8P" secondAttribute="bottom" constant="8" id="CEm-Qb-tdt"/>
                                     <constraint firstItem="uCl-WJ-tzM" firstAttribute="width" secondItem="W5Z-Qj-T6a" secondAttribute="width" multiplier="90:345" id="CGB-rf-BVg"/>
                                     <constraint firstItem="uCl-WJ-tzM" firstAttribute="centerY" secondItem="qsL-pY-GQj" secondAttribute="centerY" id="FPm-WY-QE7"/>
                                     <constraint firstAttribute="trailing" secondItem="uCl-WJ-tzM" secondAttribute="trailing" constant="18" id="FYO-n9-fir"/>
                                     <constraint firstItem="XpO-Wx-S8P" firstAttribute="centerY" secondItem="W5Z-Qj-T6a" secondAttribute="centerY" id="M35-J2-iez"/>
+                                    <constraint firstItem="AMz-8D-p87" firstAttribute="centerY" secondItem="W5Z-Qj-T6a" secondAttribute="centerY" multiplier="1:2" id="Rqw-gx-gRy"/>
                                     <constraint firstItem="qsL-pY-GQj" firstAttribute="leading" secondItem="m1X-Yy-qV0" secondAttribute="leading" id="dWP-5Q-4By"/>
-                                    <constraint firstItem="AMz-8D-p87" firstAttribute="top" secondItem="XpO-Wx-S8P" secondAttribute="top" constant="-9" id="f5g-lQ-3fC"/>
                                     <constraint firstAttribute="width" secondItem="W5Z-Qj-T6a" secondAttribute="height" multiplier="345:103" id="kgs-Gw-z4l"/>
-                                    <constraint firstItem="AMz-8D-p87" firstAttribute="leading" secondItem="XpO-Wx-S8P" secondAttribute="trailing" constant="12" id="y2F-TU-T8D"/>
-                                    <constraint firstItem="XpO-Wx-S8P" firstAttribute="leading" secondItem="W5Z-Qj-T6a" secondAttribute="leading" constant="15" id="z6N-59-A9m"/>
-                                    <constraint firstItem="m1X-Yy-qV0" firstAttribute="centerY" secondItem="XpO-Wx-S8P" secondAttribute="centerY" constant="-3" id="zDT-LH-Al0"/>
+                                    <constraint firstItem="m1X-Yy-qV0" firstAttribute="centerY" secondItem="W5Z-Qj-T6a" secondAttribute="centerY" multiplier="1:1.06" id="ovw-Qt-6ph"/>
+                                    <constraint firstItem="AMz-8D-p87" firstAttribute="leading" secondItem="XpO-Wx-S8P" secondAttribute="trailing" constant="8" id="y2F-TU-T8D"/>
+                                    <constraint firstItem="XpO-Wx-S8P" firstAttribute="leading" secondItem="W5Z-Qj-T6a" secondAttribute="leading" constant="10" id="z6N-59-A9m"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -623,6 +623,11 @@
                         <outlet property="rankTableView" destination="Dwh-G6-WNt" id="wW3-dR-vf1"/>
                         <outlet property="rankUnderBar" destination="vrX-yH-Lby" id="7d9-H6-cMb"/>
                         <outlet property="rankView" destination="Ct7-ad-HvI" id="52s-fe-c6H"/>
+                        <outletCollection property="starCollection" destination="y5z-HU-3z7" collectionClass="NSMutableArray" id="aKy-qU-Ac0"/>
+                        <outletCollection property="starCollection" destination="Mxa-af-yI4" collectionClass="NSMutableArray" id="Oes-Fn-PUj"/>
+                        <outletCollection property="starCollection" destination="kxH-ga-P3n" collectionClass="NSMutableArray" id="UDs-rw-5xQ"/>
+                        <outletCollection property="starCollection" destination="14W-Or-hqD" collectionClass="NSMutableArray" id="5ca-rD-YUI"/>
+                        <outletCollection property="starCollection" destination="xul-6C-nPg" collectionClass="NSMutableArray" id="zUr-aZ-1v8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLI-3B-dLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -963,7 +968,7 @@
                                         <rect key="frame" x="0.0" y="788" width="375" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ChD-1D-pnp" id="C70-Wk-kmS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="53"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="52.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kut-om-799">
@@ -985,20 +990,20 @@
                                                     <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEX-1Q-RqC">
-                                                    <rect key="frame" x="0.0" y="51.5" width="375" height="1"/>
+                                                    <rect key="frame" x="0.0" y="51" width="375" height="1"/>
                                                     <color key="backgroundColor" red="0.83529411760000005" green="0.83529411760000005" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="nH7-7x-eFS"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그아웃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jmg-gv-Ati">
-                                                    <rect key="frame" x="22" y="22.5" width="47.5" height="15.5"/>
+                                                    <rect key="frame" x="22" y="22.5" width="47.5" height="15"/>
                                                     <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="13"/>
                                                     <color key="textColor" red="0.85882352941176465" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="logoutBtn" translatesAutoresizingMaskIntoConstraints="NO" id="oSR-Ih-7SB">
-                                                    <rect key="frame" x="339" y="21" width="19" height="17.5"/>
+                                                    <rect key="frame" x="339" y="21" width="19" height="17"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>

@@ -10,7 +10,12 @@ import UIKit
 
 class MyPageTabVC: UIViewController {
     @IBOutlet weak var infoTableView: UITableView!
-    
+    var profile: Profile? {
+        didSet {
+            infoTableView.reloadData()
+        }
+    }
+    let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0MiwiaWF0IjoxNTM3MzYxNDI1LCJleHAiOjE1Mzk5NTM0MjV9.GNSbBt28VaJPlISjzP82WUhHONpAfR-VgLC84cZxhD0"
     var opened = false {
         didSet {
             infoTableView.reloadData()
@@ -21,6 +26,15 @@ class MyPageTabVC: UIViewController {
         super.viewDidLoad()
         infoTableView.dataSource = self
         infoTableView.delegate = self
+        dataInit()
+    }
+    
+    func dataInit() {
+        
+        MyPageService.shareInstance.getMyPage(token: token, completion: { (profile) in
+            self.profile = profile
+        }) { (err) in
+        }
     }
 }
 
@@ -39,6 +53,8 @@ extension MyPageTabVC:  UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cell: UITableViewCell!
+        //수정
+        guard let profile = self.profile else{return cell}
         
         if indexPath.section == 0{
             cell = infoTableView.dequeueReusableCell(withIdentifier: "InfoCell") as! InfoCell

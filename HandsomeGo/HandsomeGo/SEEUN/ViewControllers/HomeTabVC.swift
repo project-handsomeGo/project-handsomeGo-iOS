@@ -9,6 +9,16 @@
 import UIKit
 
 class HomeTabVC: UIViewController {
+    var check = false
+    
+    var rankingList: [RankPlace] = [] {
+        didSet {
+            rankTableView.reloadData()
+        }
+    }
+    
+    var choosedPlace: Place!
+    
     var detailOpened = false {
         didSet {
             mapDetailView.isHidden = !detailOpened
@@ -31,6 +41,7 @@ class HomeTabVC: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var detailBtn: UIButton!
+    @IBOutlet var starCollection: [UIImageView]!
     
     // Rank Outlet
     @IBOutlet weak var rankView: UIView!
@@ -39,19 +50,27 @@ class HomeTabVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        dataInit()
         mapSetup()
         mapDetailSetup()
         rankSetup()
     }
-    func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        print("\(mapScrollView.contentOffset.x),\(mapScrollView.contentOffset.y)")
-        
+    
+    func dataInit() {
+        RankListService.shareInstance.getRankList(completion: { (res) in
+            self.rankingList = res
+        }) { (err) in
+        }
     }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        mapScrollView.zoomScale = 1.5
-        mapScrollView.contentOffset = CGPoint(x: 95, y: 51)
+        if check == false {
+            let unit = self.view.frame.width/375
+            mapScrollView.zoomScale = 1.5/unit
+            mapScrollView.contentOffset = CGPoint(x: 95*unit, y: 51*unit)
+            check = true
+        }
     }
     
     func rankSetup() {
@@ -85,15 +104,29 @@ class HomeTabVC: UIViewController {
         mapUnderBar.isHidden = true
         mapScrollView.isHidden = true
     }
+    
     @IBAction func mapIconTapAction(_ sender: UIButton) {
         detailOpened = true
+        detailImageView.image = sender.currentImage
+        
+        PlaceService.shareInstance.getPlace(placeId: sender.tag, completion: { (place) in
+            self.choosedPlace = place
+            self.nameLabel.text = place.placeName
+            self.addressLabel.text = place.placeAddress
+            for i in 0...4 {
+                if i < place.placeStar {
+                    self.starCollection[i].image = UIImage(named: "starYellow.png")
+                } else {
+                    self.starCollection[i].image = UIImage(named: "starBlank.png")
+                }
+            }
+        }) { (err) in
+        }
     }
     
     @objc func dismissView() {
         detailOpened = false
     }
-    
-    
 }
 
 
@@ -133,11 +166,13 @@ extension HomeTabVC: UIScrollViewDelegate {
 extension HomeTabVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return rankingList.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = rankTableView.dequeueReusableCell(withIdentifier: "RankCell", for: indexPath) as! RankCell
         cell.numLabel.text = "\(indexPath.row+1)"
+        cell.nameLabel.text = rankingList[indexPath.row].placeName
         return cell
         
     }
