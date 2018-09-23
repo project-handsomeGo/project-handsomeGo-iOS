@@ -29,6 +29,7 @@
 		CB05684A2157D81000323BFF /* MyPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0568492157D80F00323BFF /* MyPageService.swift */; };
 		CB05684C2157ED7B00323BFF /* StampListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB05684B2157ED7B00323BFF /* StampListData.swift */; };
 		CB05684E2157EE0E00323BFF /* StampListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB05684D2157EE0E00323BFF /* StampListService.swift */; };
+		CB05685221580A9F00323BFF /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB05685121580A9F00323BFF /* TabBarVC.swift */; };
 		CB564D81213EB1D400E54961 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D80213EB1D400E54961 /* AppDelegate.swift */; };
 		CB564D86213EB1D400E54961 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB564D84213EB1D400E54961 /* Main.storyboard */; };
 		CB564D88213EB1E000E54961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB564D87213EB1E000E54961 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		CB0568492157D80F00323BFF /* MyPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageService.swift; sourceTree = "<group>"; };
 		CB05684B2157ED7B00323BFF /* StampListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampListData.swift; sourceTree = "<group>"; };
 		CB05684D2157EE0E00323BFF /* StampListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampListService.swift; sourceTree = "<group>"; };
+		CB05685121580A9F00323BFF /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		CB564D7D213EB1D400E54961 /* HandsomeGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandsomeGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB564D80213EB1D400E54961 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB564D85213EB1D400E54961 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				CB564DC92146D4E200E54961 /* MyPageTabVC.swift */,
 				CB564D9A213ECCF500E54961 /* QRcodeVC.swift */,
 				CB05682D214F85A600323BFF /* ProfileChangeVC.swift */,
+				CB05685121580A9F00323BFF /* TabBarVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				CB0568312157A76C00323BFF /* APIServices.swift in Sources */,
 				CB564D9B213ECCF500E54961 /* QRcodeVC.swift in Sources */,
 				CB0568332157A79A00323BFF /* RankListService.swift in Sources */,
+				CB05685221580A9F00323BFF /* TabBarVC.swift in Sources */,
 				CB05682E214F85A600323BFF /* ProfileChangeVC.swift in Sources */,
 				CB0568462157C3AA00323BFF /* UIImageVIew+imageFromUrl.swift in Sources */,
 				CB564D97213ECCC200E54961 /* QRcodeTabVC.swift in Sources */,

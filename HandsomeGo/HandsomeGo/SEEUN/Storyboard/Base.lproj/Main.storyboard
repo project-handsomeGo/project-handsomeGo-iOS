@@ -20,17 +20,42 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Rcode TabVC-->
+        <!--QR코드-->
         <scene sceneID="OPo-Ww-cKa">
             <objects>
-                <viewController id="Xjq-bc-Z93" customClass="QRcodeTabVC" customModule="HandsomeGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QRcodeTabVC" id="Xjq-bc-Z93" customClass="QRcodeTabVC" customModule="HandsomeGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pq0-JZ-ykr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gek-dR-WDv">
+                                <rect key="frame" x="16" y="42" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="cancelAction:" destination="Xjq-bc-Z93" eventType="touchUpInside" id="cgy-YR-XOe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="잘생긴 서울의 20 장소를 찾아  QR코드로 스탬프 투어를  시작해보세요 :D" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfT-7b-4qU">
+                                <rect key="frame" x="83.5" y="70" width="208" height="94"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VfT-7b-4qU" firstAttribute="top" secondItem="wZP-B5-Wg2" secondAttribute="top" constant="50" id="LMJ-Kq-7jH"/>
+                            <constraint firstItem="VfT-7b-4qU" firstAttribute="centerX" secondItem="Pq0-JZ-ykr" secondAttribute="centerX" id="siq-oX-qGb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wZP-B5-Wg2"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="QR코드" image=" _qrGray" id="5Tj-gX-YQS"/>
                     <navigationItem key="navigationItem" id="e6R-HK-5N1"/>
+                    <connections>
+                        <outlet property="cancelBtn" destination="gek-dR-WDv" id="NGa-YL-KWZ"/>
+                        <outlet property="textLabel" destination="VfT-7b-4qU" id="rh7-UV-8IF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qie-Tu-ay0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <pinchGestureRecognizer id="aE6-fv-VOJ">
@@ -634,10 +659,10 @@
             </objects>
             <point key="canvasLocation" x="1160.8" y="-952.17391304347836"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab BarVC-->
         <scene sceneID="9v0-Uc-bt5">
             <objects>
-                <tabBarController id="6ud-cj-WwA" sceneMemberID="viewController">
+                <tabBarController id="6ud-cj-WwA" customClass="TabBarVC" customModule="HandsomeGo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QdR-bB-Ttv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -646,7 +671,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="WVc-ZW-PxZ" kind="relationship" relationship="viewControllers" id="Cul-ei-FPV"/>
-                        <segue destination="2Y0-PH-xmJ" kind="relationship" relationship="viewControllers" id="7EC-Zp-i47"/>
+                        <segue destination="Xjq-bc-Z93" kind="relationship" relationship="viewControllers" id="r0h-Qs-gDT"/>
                         <segue destination="UO5-cA-nDQ" kind="relationship" relationship="viewControllers" id="RZc-V0-auf"/>
                     </connections>
                 </tabBarController>
@@ -1151,25 +1176,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AnD-CO-6ug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-194.40000000000001" y="515.8920539730135"/>
-        </scene>
-        <!--QR코드-->
-        <scene sceneID="m0k-be-saQ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Y0-PH-xmJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="QR코드" image=" _qrGray" id="abM-Y3-gjY"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HsZ-ne-cyd">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Xjq-bc-Z93" kind="relationship" relationship="rootViewController" id="t4y-0Q-bRW"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vXO-RL-gDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="221.59999999999999" y="-287.40629685157421"/>
         </scene>
     </scenes>
     <resources>
