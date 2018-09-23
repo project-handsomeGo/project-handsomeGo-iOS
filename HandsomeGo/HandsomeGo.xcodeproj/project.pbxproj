@@ -16,7 +16,6 @@
 		CB05682C214BBE1000323BFF /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB05682B214BBE1000323BFF /* InfoCell.swift */; };
 		CB05682E214F85A600323BFF /* ProfileChangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB05682D214F85A600323BFF /* ProfileChangeVC.swift */; };
 		CB564D81213EB1D400E54961 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D80213EB1D400E54961 /* AppDelegate.swift */; };
-		CB564D83213EB1D400E54961 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D82213EB1D400E54961 /* ViewController.swift */; };
 		CB564D86213EB1D400E54961 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB564D84213EB1D400E54961 /* Main.storyboard */; };
 		CB564D88213EB1E000E54961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB564D87213EB1E000E54961 /* Assets.xcassets */; };
 		CB564D8B213EB1E000E54961 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB564D89213EB1E000E54961 /* LaunchScreen.storyboard */; };
@@ -41,7 +40,6 @@
 		CB05682D214F85A600323BFF /* ProfileChangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileChangeVC.swift; sourceTree = "<group>"; };
 		CB564D7D213EB1D400E54961 /* HandsomeGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandsomeGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB564D80213EB1D400E54961 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB564D82213EB1D400E54961 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB564D85213EB1D400E54961 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB564D87213EB1E000E54961 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB564D8A213EB1E000E54961 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -138,7 +136,6 @@
 		CB564D94213EBEFB00E54961 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CB564D82213EB1D400E54961 /* ViewController.swift */,
 				CB564D9C214661DC00E54961 /* HomeTabVC.swift */,
 				CB564D96213ECCC200E54961 /* QRcodeTabVC.swift */,
 				CB564DC92146D4E200E54961 /* MyPageTabVC.swift */,
@@ -289,7 +286,6 @@
 			files = (
 				CB056828214BB61D00323BFF /* StampListCell.swift in Sources */,
 				CB564D9B213ECCF500E54961 /* QRcodeVC.swift in Sources */,
-				CB564D83213EB1D400E54961 /* ViewController.swift in Sources */,
 				CB05682E214F85A600323BFF /* ProfileChangeVC.swift in Sources */,
 				CB564D97213ECCC200E54961 /* QRcodeTabVC.swift in Sources */,
 				CB564DCA2146D4E200E54961 /* MyPageTabVC.swift in Sources */,
