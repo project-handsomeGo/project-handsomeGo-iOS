@@ -1,31 +1,30 @@
-
 //
-//  MyPageService.swift
+//  StampListService.swift
 //  HandsomeGo
 //
-//  Created by 박세은 on 2018. 9. 23..
+//  Created by 박세은 on 2018. 9. 24..
 //  Copyright © 2018년 박세은. All rights reserved.
 //
-
 import Foundation
 import Alamofire
 import SwiftyJSON
 
-struct MyPageService: APIService, RequestService{
-    static let shareInstance = MyPageService()
-    let URL = url("/mypage")
-    typealias NetworkData = MypageData
+struct StampListService: APIService, RequestService{
     
-    func getMyPage(token: String, completion: @escaping (Profile) -> Void, error: @escaping (Int) -> Void) {
-       
+    static let shareInstance = StampListService()
+    let URL = url("/stamps")
+    typealias NetworkData = StampListData
+    
+    func getStampList(token: String, completion: @escaping ([StampPlace]) -> Void, error: @escaping (Int) -> Void) {
+        
         let header: HTTPHeaders = [
             "Authorization" : token,
             "Content-Type" : "application/json"
         ]
         gettable(URL, body: nil, header: header) { res in
             switch res {
-            case .success(let productData):
-                let data = productData.data
+            case .success(let stampListData):
+                let data = stampListData.data.place
                 completion(data)
             case .successWithNil(_):
                 break
@@ -34,4 +33,5 @@ struct MyPageService: APIService, RequestService{
             }
         }
     }
+    
 }

@@ -66,11 +66,19 @@ class HomeTabVC: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if check == false {
-            let unit = self.view.frame.width/375
-            mapScrollView.zoomScale = 1.5/unit
-            mapScrollView.contentOffset = CGPoint(x: 95*unit, y: 51*unit)
-            check = true
+            let unit = self.view.frame.width/320
+            mapScrollView.zoomScale = 1.45/unit
+            mapScrollView.contentOffset = CGPoint(x: 160*unit, y: 35*unit)
         }
+       
+    }
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        print("\(mapScrollView.contentOffset.x),\(mapScrollView.contentOffset.y)")
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        check = true
+        
     }
     
     func rankSetup() {

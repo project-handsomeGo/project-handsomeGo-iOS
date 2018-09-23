@@ -12,6 +12,7 @@ class StampListCell: UITableViewCell {
 
     @IBOutlet weak var stampCollectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
+    var stampImage: [UIImage] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,12 +30,12 @@ class StampListCell: UITableViewCell {
 }
 extension StampListCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return stampImage.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = stampCollectionView.dequeueReusableCell(withReuseIdentifier: "StampCell", for: indexPath) as! StampCell
-        
+        cell.stampImageView.image = stampImage[indexPath.item]
         return cell
         
     }

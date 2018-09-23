@@ -20,10 +20,10 @@ class InfoCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        profileImageView.layer.cornerRadius =
-            86*self.frame.height/667
         profileImageView.layer.masksToBounds = true
+        
+        profileImageView.layer.borderWidth = 0.5
+        profileImageView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
     }
 
