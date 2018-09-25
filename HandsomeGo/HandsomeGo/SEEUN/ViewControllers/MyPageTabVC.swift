@@ -16,12 +16,15 @@ class MyPageTabVC: UIViewController {
     
     var myStamp:[UIImage] = []  {
         didSet {
-            dataInit()
             infoTableView.reloadData()
         }
     }
     
-    var myProfile: Profile?
+    var myProfile: Profile?  {
+        didSet {
+            infoTableView.reloadData()
+        }
+    }
     
     let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0MiwiaWF0IjoxNTM3MzYxNDI1LCJleHAiOjE1Mzk5NTM0MjV9.GNSbBt28VaJPlISjzP82WUhHONpAfR-VgLC84cZxhD0"
     var opened = false {
@@ -34,13 +37,15 @@ class MyPageTabVC: UIViewController {
         super.viewDidLoad()
         infoTableView.dataSource = self
         infoTableView.delegate = self
-        stampInit()
+        dataInit()
+        
     }
     
     func dataInit() {
         
         MyPageService.shareInstance.getMyPage(token: token, completion: { (profile) in
             self.myProfile = profile
+            self.stampInit()
         }) { (err) in
         }
     }
