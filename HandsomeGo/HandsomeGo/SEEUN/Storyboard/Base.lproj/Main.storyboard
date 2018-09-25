@@ -58,16 +58,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qie-Tu-ay0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pinchGestureRecognizer id="aE6-fv-VOJ">
-                    <connections>
-                        <action selector="zoomInOut:" destination="Xjq-bc-Z93" id="uv3-2y-QHp"/>
-                    </connections>
-                </pinchGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="BL5-g1-3D9">
-                    <connections>
-                        <action selector="drag:" destination="Xjq-bc-Z93" id="JVN-I6-o7C"/>
-                    </connections>
-                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1160.8" y="-287.40629685157421"/>
         </scene>
