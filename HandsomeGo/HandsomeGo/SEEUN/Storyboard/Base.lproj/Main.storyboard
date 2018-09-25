@@ -28,10 +28,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gek-dR-WDv">
-                                <rect key="frame" x="16" y="42" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gek-dR-WDv">
+                                <rect key="frame" x="15" y="20" width="28" height="28"/>
+                                <state key="normal" image="icDismiss"/>
                                 <connections>
                                     <action selector="cancelAction:" destination="Xjq-bc-Z93" eventType="touchUpInside" id="cgy-YR-XOe"/>
                                 </connections>
@@ -43,9 +42,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="VfT-7b-4qU" firstAttribute="top" secondItem="wZP-B5-Wg2" secondAttribute="top" constant="50" id="LMJ-Kq-7jH"/>
+                            <constraint firstItem="gek-dR-WDv" firstAttribute="leading" secondItem="wZP-B5-Wg2" secondAttribute="leading" constant="15" id="kGn-Cu-t3c"/>
+                            <constraint firstItem="gek-dR-WDv" firstAttribute="top" secondItem="wZP-B5-Wg2" secondAttribute="top" id="kMr-l3-3hz"/>
                             <constraint firstItem="VfT-7b-4qU" firstAttribute="centerX" secondItem="Pq0-JZ-ykr" secondAttribute="centerX" id="siq-oX-qGb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wZP-B5-Wg2"/>
@@ -1172,6 +1173,7 @@
         <image name=" _homeGray" width="25" height="25"/>
         <image name=" _mypageGray" width="25" height="25"/>
         <image name=" _qrGray" width="25" height="25"/>
+        <image name="icDismiss" width="28" height="28"/>
         <image name="logoutBtn" width="19" height="17"/>
         <image name="m_ deogsugung" width="136" height="136"/>
         <image name="m_ donuimun" width="136" height="136"/>

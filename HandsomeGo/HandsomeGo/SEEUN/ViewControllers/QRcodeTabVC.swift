@@ -84,6 +84,10 @@ class QRcodeTabVC: UIViewController{
             return
         }
         
+        guard let id = Int(decodedURL) else {return}
+        
+        
+        
         let alertPrompt = UIAlertController(title: "Open App", message: "You're going to open \(decodedURL)", preferredStyle: .actionSheet)
         let confirmAction = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: { (action) -> Void in
             
