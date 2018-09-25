@@ -106,7 +106,6 @@ extension MyPageTabVC:  UITableViewDelegate, UITableViewDataSource {
             
             dateFormatter.timeZone = TimeZone.current
             let originDate = dateFormatter.date(from: profile.lastStampDate)
-                print(profile.lastStampDate)
             dateFormatter.dateFormat = "yyyy.MM.dd"
             infoCell.dateLabel.text = dateFormatter.string(from: originDate!)
             

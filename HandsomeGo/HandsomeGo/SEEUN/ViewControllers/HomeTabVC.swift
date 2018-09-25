@@ -59,6 +59,7 @@ class HomeTabVC: UIViewController {
     func dataInit() {
         RankListService.shareInstance.getRankList(completion: { (res) in
             self.rankingList = res
+           
         }) { (err) in
         }
     }
@@ -72,9 +73,7 @@ class HomeTabVC: UIViewController {
         }
        
     }
-    func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        print("\(mapScrollView.contentOffset.x),\(mapScrollView.contentOffset.y)")
-    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         check = true
@@ -179,10 +178,27 @@ extension HomeTabVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let place = rankingList[indexPath.row]
+        var cell: RankCell!
         
-        let cell = rankTableView.dequeueReusableCell(withIdentifier: "RankCell", for: indexPath) as! RankCell
+        
+        
+        
+       
+        if indexPath.row == 0 {
+            cell = rankTableView.dequeueReusableCell(withIdentifier: "1stCell", for: indexPath) as! RankCell
+            
+        } else if indexPath.row == 1 {
+            cell = rankTableView.dequeueReusableCell(withIdentifier: "2ndCell", for: indexPath) as! RankCell
+        } else if indexPath.row == 2 {
+            cell = rankTableView.dequeueReusableCell(withIdentifier: "3rdCell", for: indexPath) as! RankCell
+        } else {
+            cell = rankTableView.dequeueReusableCell(withIdentifier: "RankCell", for: indexPath) as! RankCell
+            
+        }
+        
         cell.numLabel.text = "\(indexPath.row+1)"
         cell.nameLabel.text = place.placeName
+        
         if place.placeCategory == "도시 건축"{
             cell.colorView.backgroundColor = #colorLiteral(red: 0.3294117647, green: 0.6078431373, blue: 0.05490196078, alpha: 1)
         } else if place.placeCategory == "과학 경제"{
