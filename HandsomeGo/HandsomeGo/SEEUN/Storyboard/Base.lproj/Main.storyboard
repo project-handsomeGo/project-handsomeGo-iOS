@@ -155,7 +155,7 @@
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWd-ZV-b4M">
                                                             <rect key="frame" x="15" y="3" width="10" height="49"/>
-                                                            <color key="backgroundColor" red="0.98431372549019602" green="0.54509803921568623" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" red="0.35686274509803922" green="0.63529411764705879" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="tWd-ZV-b4M" secondAttribute="height" multiplier="11:53" id="Gdb-rz-Tt2"/>
                                                             </constraints>

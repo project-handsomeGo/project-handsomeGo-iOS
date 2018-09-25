@@ -178,9 +178,18 @@ extension HomeTabVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let place = rankingList[indexPath.row]
+        
         let cell = rankTableView.dequeueReusableCell(withIdentifier: "RankCell", for: indexPath) as! RankCell
         cell.numLabel.text = "\(indexPath.row+1)"
-        cell.nameLabel.text = rankingList[indexPath.row].placeName
+        cell.nameLabel.text = place.placeName
+        if place.placeCategory == "도시 건축"{
+            cell.colorView.backgroundColor = #colorLiteral(red: 0.3294117647, green: 0.6078431373, blue: 0.05490196078, alpha: 1)
+        } else if place.placeCategory == "과학 경제"{
+            cell.colorView.backgroundColor = #colorLiteral(red: 0.3568627451, green: 0.6352941176, blue: 0.9647058824, alpha: 1)
+        } else if place.placeCategory == "역사 문화"{
+            cell.colorView.backgroundColor = #colorLiteral(red: 0.9843137255, green: 0.5450980392, blue: 0.1254901961, alpha: 1)
+        }
         return cell
         
     }

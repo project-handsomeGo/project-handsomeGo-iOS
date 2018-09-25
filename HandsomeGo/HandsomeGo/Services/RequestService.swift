@@ -29,6 +29,10 @@ extension RequestService {
                 if let value = res.result.value {
                     
                     let decoder = JSONDecoder()
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                    decoder.dateDecodingStrategy = .formatted(dateFormatter)
+                    
                     do {
                         let data = try decoder.decode(NetworkData.self, from: value)
                         completion(.success(data))

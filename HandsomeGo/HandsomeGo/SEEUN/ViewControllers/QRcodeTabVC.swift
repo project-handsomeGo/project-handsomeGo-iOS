@@ -11,6 +11,8 @@ import AVFoundation
 
 class QRcodeTabVC: UIViewController{
   
+    let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0MiwiaWF0IjoxNTM3MzYxNDI1LCJleHAiOjE1Mzk5NTM0MjV9.GNSbBt28VaJPlISjzP82WUhHONpAfR-VgLC84cZxhD0"
+    
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var textLabel: UILabel!
     var captureSession = AVCaptureSession()
@@ -86,24 +88,30 @@ class QRcodeTabVC: UIViewController{
         
         guard let id = Int(decodedURL) else {return}
         
-        
-        
-        let alertPrompt = UIAlertController(title: "Open App", message: "You're going to open \(decodedURL)", preferredStyle: .actionSheet)
-        let confirmAction = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: { (action) -> Void in
-            
-            if let url = URL(string: decodedURL) {
-                if UIApplication.shared.canOpenURL(url) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        StampStatusService.shareInstance.getStampStatus(token: token, stampId: id, completion: { (stamp) in
+            let alertPrompt = UIAlertController(title: "\(stamp.placeName)", message:"" , preferredStyle: .actionSheet)
+            let confirmAction = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: { (action) -> Void in
+                
+                if let url = URL(string: decodedURL) {
+                    if UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
                 }
-            }
-        })
+            })
+            
+            let cancelAction = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel, handler: nil)
+            
+            alertPrompt.addAction(confirmAction)
+            alertPrompt.addAction(cancelAction)
+            
+            self.present(alertPrompt, animated: true, completion: nil)
+        }) { (err) in
+        }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
         
-        alertPrompt.addAction(confirmAction)
-        alertPrompt.addAction(cancelAction)
         
-        present(alertPrompt, animated: true, completion: nil)
+        
+        
     }
     
 }

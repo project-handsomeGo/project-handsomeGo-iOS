@@ -11,6 +11,8 @@ import UIKit
 class MyPageTabVC: UIViewController {
     @IBOutlet weak var infoTableView: UITableView!
     
+    let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0MiwiaWF0IjoxNTM3MzYxNDI1LCJleHAiOjE1Mzk5NTM0MjV9.GNSbBt28VaJPlISjzP82WUhHONpAfR-VgLC84cZxhD0"
+    
     let stampImage = [#imageLiteral(resourceName: "sDoldamgil"),#imageLiteral(resourceName: "sCulture"),#imageLiteral(resourceName: "sUnderBunker.png"),#imageLiteral(resourceName: "sKyungChun"),#imageLiteral(resourceName: "sBongjae"),#imageLiteral(resourceName: "s50Plus"),#imageLiteral(resourceName: "sHamsangPark"),#imageLiteral(resourceName: "sSeoulGarden"),#imageLiteral(resourceName: "sNewPlaza"),#imageLiteral(resourceName: "sHasudo"),#imageLiteral(resourceName: "sBioHub"),#imageLiteral(resourceName: "sCarIndustry"),#imageLiteral(resourceName: "sInnovationHub"),#imageLiteral(resourceName: "sInnovationPark"),#imageLiteral(resourceName: "sSeoulScience"),#imageLiteral(resourceName: "sSeoulHub"),#imageLiteral(resourceName: "sSeoullo7017"),#imageLiteral(resourceName: "sDonuimun"),#imageLiteral(resourceName: "sSeoulbiennale"),#imageLiteral(resourceName: "sSewoon")]
     let stampGrayImage = [#imageLiteral(resourceName: "sDoldamgilGray"),#imageLiteral(resourceName: "sCultureGray"),#imageLiteral(resourceName: "sUnderBunkerGray"),#imageLiteral(resourceName: "sKyungChunGray"),#imageLiteral(resourceName: "sBongjaeGray"),#imageLiteral(resourceName: "s50PlusGray"),#imageLiteral(resourceName: "sHansangParkGray"),#imageLiteral(resourceName: "sSeoulGardenGray"),#imageLiteral(resourceName: "sNewPlazaGray"),#imageLiteral(resourceName: "sHasudoGray"),#imageLiteral(resourceName: "sBioHubGray"),#imageLiteral(resourceName: "sCarIndustryGray"),#imageLiteral(resourceName: "sInnovationHubGray"),#imageLiteral(resourceName: "sInnovationParkGray"),#imageLiteral(resourceName: "sSeoulScienceGray"),#imageLiteral(resourceName: "sSeoulHubGray"),#imageLiteral(resourceName: "sSeoullo7017Gray"),#imageLiteral(resourceName: "sDonuimunGray"),#imageLiteral(resourceName: "sSeoulbiennaleGray"),#imageLiteral(resourceName: "sSewoonGray")]
     
@@ -26,7 +28,6 @@ class MyPageTabVC: UIViewController {
         }
     }
     
-    let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0MiwiaWF0IjoxNTM3MzYxNDI1LCJleHAiOjE1Mzk5NTM0MjV9.GNSbBt28VaJPlISjzP82WUhHONpAfR-VgLC84cZxhD0"
     var opened = false {
         didSet {
             infoTableView.reloadData()
@@ -38,19 +39,15 @@ class MyPageTabVC: UIViewController {
         infoTableView.dataSource = self
         infoTableView.delegate = self
         dataInit()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        dataInit()
     }
     
     func dataInit() {
         
-        MyPageService.shareInstance.getMyPage(token: token, completion: { (profile) in
-            self.myProfile = profile
-            self.stampInit()
-        }) { (err) in
-        }
-    }
-    
-    func stampInit() {
         StampListService.shareInstance.getStampList(token: token, completion: { (list) in
             self.myStamp.removeAll()
             for i in 0...list.count-1 {
@@ -64,7 +61,12 @@ class MyPageTabVC: UIViewController {
         }) { (err) in
             
         }
+        MyPageService.shareInstance.getMyPage(token: token, completion: { (profile) in
+            self.myProfile = profile
+        }) { (err) in
+        }
     }
+    
 }
 
 extension MyPageTabVC:  UITableViewDelegate, UITableViewDataSource {
@@ -98,6 +100,16 @@ extension MyPageTabVC:  UITableViewDelegate, UITableViewDataSource {
             infoCell.profileImageView.imageFromUrl(profile.picture, defaultImgPath: "")
             infoCell.nameLabel.text = profile.name
             infoCell.stampLabel.text = "\(profile.stampCount) / 20"
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.sssZ"
+            
+            dateFormatter.timeZone = TimeZone.current
+            let originDate = dateFormatter.date(from: profile.lastStampDate)
+                print(profile.lastStampDate)
+            dateFormatter.dateFormat = "yyyy.MM.dd"
+            infoCell.dateLabel.text = dateFormatter.string(from: originDate!)
+            
             return infoCell
             
         } else if indexPath.section == 1 {
@@ -107,6 +119,7 @@ extension MyPageTabVC:  UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.section == 2 && indexPath.row == 1 {
             let listCell = infoTableView.dequeueReusableCell(withIdentifier: "StampListCell") as! StampListCell
             listCell.stampImage = myStamp
+            
             let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
             layout.sectionInset = UIEdgeInsets(top: 20*unit, left: 23*unit, bottom: 20*unit, right: 23*unit)
             layout.itemSize = CGSize(width: 55*unit, height: 55*unit)
@@ -133,9 +146,8 @@ extension MyPageTabVC:  UITableViewDelegate, UITableViewDataSource {
              self.navigationController?.pushViewController(vc, animated: true)
         } else if indexPath.section == 2 && indexPath.row == 0 {
             
-            if opened == false {
-                stampInit()
-            }
+            dataInit()
+            
             opened = !opened
         }
     }

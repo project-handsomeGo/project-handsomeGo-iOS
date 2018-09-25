@@ -25,6 +25,7 @@ struct MyPageService: APIService, RequestService{
         gettable(URL, body: nil, header: header) { res in
             switch res {
             case .success(let productData):
+                
                 let data = productData.data
                 completion(data)
             case .successWithNil(_):

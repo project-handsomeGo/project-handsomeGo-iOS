@@ -17,10 +17,12 @@ struct RankPlace: Codable {
     let placeID: Int
     let placeName: String
     let placeStar: Int
+    let placeCategory: String
     
     enum CodingKeys: String, CodingKey {
         case placeID = "place_id"
         case placeName = "place_name"
         case placeStar = "place_star"
+        case placeCategory = "place_category"
     }
 }
