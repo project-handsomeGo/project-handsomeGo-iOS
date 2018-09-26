@@ -29,10 +29,6 @@ extension RequestService {
                 if let value = res.result.value {
                     
                     let decoder = JSONDecoder()
-                    let dateFormatter = DateFormatter()
-                    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-                    decoder.dateDecodingStrategy = .formatted(dateFormatter)
-                    
                     do {
                         let data = try decoder.decode(NetworkData.self, from: value)
                         completion(.success(data))
@@ -73,6 +69,51 @@ extension RequestService {
     
     func postable(_ URL: String, body: [String:Any]?, header: HTTPHeaders?, completion: @escaping (NetworkResult<NetworkData>) -> Void) {
         Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseData { (res) in
+            guard let statusCode = res.response?.statusCode else { return }
+            guard let status: HTTPStatusCode = HTTPStatusCode(rawValue: statusCode) else { return }
+            print(statusCode)
+            switch status {
+            case .OK:
+                print("200")
+                if let value = res.result.value {
+                    let decoder = JSONDecoder()
+                    do {
+                        let data = try decoder.decode(NetworkData.self, from: value)
+                        completion(.success(data))
+                    } catch {
+                        completion(.error(423))
+                    }
+                }
+            case .Accepted:
+                completion(.successWithNil(203))
+            case .BadRequest:
+                completion(.error(400))
+            case .Unauthorized:
+                print("401")
+                completion(.error(401))
+            case .Forbidden:
+                print("403")
+                completion(.error(403))
+            case .NotFound:
+                print("404")
+                completion(.error(404))
+            case .Conflict:
+                print("409")
+                completion(.error(409))
+            case .ValidationError:
+                print("422")
+                completion(.error(422))
+            case .DecodingError:
+                completion(.error(423))
+            case .InternalServerError:
+                print("500")
+                completion(.error(500))
+            }
+        }
+    }
+    
+    func puttable(_ URL: String, body: [String:Any]?, header: HTTPHeaders?, completion: @escaping (NetworkResult<NetworkData>) -> Void) {
+        Alamofire.request(URL, method: .put, parameters: body, encoding: JSONEncoding.default, headers: header).responseData { (res) in
             guard let statusCode = res.response?.statusCode else { return }
             guard let status: HTTPStatusCode = HTTPStatusCode(rawValue: statusCode) else { return }
             print(statusCode)

@@ -22,7 +22,7 @@ class InfoCell: UITableViewCell {
         super.awakeFromNib()
         profileImageView.layer.masksToBounds = true
         
-        profileImageView.layer.borderWidth = 0.5
+        profileImageView.layer.borderWidth = 1.0
         profileImageView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
     }

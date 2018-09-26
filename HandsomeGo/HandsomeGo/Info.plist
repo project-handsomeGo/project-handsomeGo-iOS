@@ -3,7 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>UIAppFonts</key>
-	<array/>
+	<array>
+		<string>NanumSquareOTFExtraBold</string>
+		<string>NanumSquareOTFRegular</string>
+		<string>NanumSquareOTFBold</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>NSAppTransportSecurity</key>

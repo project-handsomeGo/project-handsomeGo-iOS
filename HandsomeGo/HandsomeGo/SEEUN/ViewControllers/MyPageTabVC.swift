@@ -39,11 +39,19 @@ class MyPageTabVC: UIViewController {
         infoTableView.dataSource = self
         infoTableView.delegate = self
         dataInit()
+        setupNaviBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         dataInit()
+    }
+    func setupNaviBar() {
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "NanumSquareOTFB", size: 17)!, NSAttributedStringKey.foregroundColor: UIColor.black]
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        self.navigationItem.backBarButtonItem = backItem
     }
     
     func dataInit() {

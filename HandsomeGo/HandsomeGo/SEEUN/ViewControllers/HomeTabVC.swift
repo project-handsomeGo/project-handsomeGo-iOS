@@ -54,6 +54,7 @@ class HomeTabVC: UIViewController {
         mapSetup()
         mapDetailSetup()
         rankSetup()
+        setupNaviBar()
     }
     
     func dataInit() {
@@ -78,6 +79,14 @@ class HomeTabVC: UIViewController {
         super.viewDidAppear(animated)
         check = true
         
+    }
+    
+    func setupNaviBar() {
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "NanumSquareOTFB", size: 17)!, NSAttributedStringKey.foregroundColor: UIColor.black]
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        self.navigationItem.backBarButtonItem = backItem
     }
     
     func rankSetup() {

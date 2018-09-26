@@ -35,4 +35,41 @@ struct MyPageService: APIService, RequestService{
             }
         }
     }
+    
+    func changeMyPage(token: String, name: String, photo: UIImage?, completion: @escaping () -> Void){
+        let header: HTTPHeaders = [
+            "Authorization" : token,
+            "Content-Type" : "application/json"
+        ]
+        
+        let nameData = name.data(using: .utf8)
+        Alamofire.upload(multipartFormData: { (multipartFormData) in
+            
+            multipartFormData.append(nameData!, withName: "name")
+            
+            if let photo = photo {
+                let photoData = UIImageJPEGRepresentation(photo, 0.3)
+                
+                multipartFormData.append(photoData!, withName: "picture", fileName: "photo.jpg", mimeType: "image/jpeg")
+            }
+            
+        }, to: URL, method: .put, headers: header ){ (encodingResult) in
+            switch encodingResult {
+            case .success(request: let upload, streamingFromDisk: _ , streamFileURL: _ ):
+                upload.responseData(completionHandler: { (res) in
+                    switch res.result {
+                    case .success:
+                        completion()
+                        
+                    case .failure(let err):
+                        print(err.localizedDescription)
+                    }
+                })
+                
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
+    }
+    
 }
