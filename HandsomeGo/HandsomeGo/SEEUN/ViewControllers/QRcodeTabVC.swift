@@ -89,14 +89,12 @@ class QRcodeTabVC: UIViewController{
         guard let id = Int(decodedURL) else {return}
         
         StampStatusService.shareInstance.getStampStatus(token: token, stampId: id, completion: { (stamp) in
-            let alertPrompt = UIAlertController(title: "\(stamp.placeName)", message:"" , preferredStyle: .actionSheet)
-            let confirmAction = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: { (action) -> Void in
+            let alertPrompt = UIAlertController(title: "\(stamp.placeName)", message:"\(stamp.placeName)" , preferredStyle: .actionSheet)
+            let confirmAction = UIAlertAction(title: "상세보기", style: UIAlertActionStyle.default, handler: { (action) -> Void in
                 
-                if let url = URL(string: decodedURL) {
-                    if UIApplication.shared.canOpenURL(url) {
-                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                    }
-                }
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SimpleInfoVC") as! SimpleInfoVC
+                vc.placeId = id
+                self.present(vc, animated: true, completion: nil)
             })
             
             let cancelAction = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel, handler: nil)
@@ -107,11 +105,6 @@ class QRcodeTabVC: UIViewController{
             self.present(alertPrompt, animated: true, completion: nil)
         }) { (err) in
         }
-        
-        
-        
-        
-        
     }
     
 }

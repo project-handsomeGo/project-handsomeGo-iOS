@@ -22,6 +22,7 @@ struct Place: Codable {
     let placeName, placeAddress, placeContent, placeCategory: String
     let placeStar: Int
     let placePic: String
+    let commentCount: Int
     
     enum CodingKeys: String, CodingKey {
         case placeID = "place_id"
@@ -31,5 +32,6 @@ struct Place: Codable {
         case placeCategory = "place_category"
         case placeStar = "place_star"
         case placePic = "place_pic"
+        case commentCount
     }
 }
