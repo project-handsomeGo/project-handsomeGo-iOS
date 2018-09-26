@@ -77,9 +77,7 @@ class QRcodeTabVC: UIViewController{
         }
     }
    
-    
     // MARK: - Helper methods
-    
     func launchApp(decodedURL: String) {
         
         if presentedViewController != nil {
@@ -89,11 +87,13 @@ class QRcodeTabVC: UIViewController{
         guard let id = Int(decodedURL) else {return}
         
         StampStatusService.shareInstance.getStampStatus(token: token, stampId: id, completion: { (stamp) in
+            
             let alertPrompt = UIAlertController(title: "\(stamp.placeName)", message:"\(stamp.placeName)" , preferredStyle: .actionSheet)
+            
             let confirmAction = UIAlertAction(title: "상세보기", style: UIAlertActionStyle.default, handler: { (action) -> Void in
                 
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SimpleInfoVC") as! SimpleInfoVC
-                vc.placeId = id
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "placeNaviVC") as! placeNaviVC
+                vc.id = id
                 self.present(vc, animated: true, completion: nil)
             })
             
@@ -112,24 +112,18 @@ class QRcodeTabVC: UIViewController{
 extension QRcodeTabVC: AVCaptureMetadataOutputObjectsDelegate {
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRect.zero
-            //            messageLabel.text = "No QR code is detected"
             return
         }
-        
-        // Get the metadata object.
         let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
         
         if supportedCodeTypes.contains(metadataObj.type) {
-            // If the found metadata is equal to the QR code metadata (or barcode) then update the status label's text and set the bounds
             let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
                 launchApp(decodedURL: metadataObj.stringValue!)
-                //                messageLabel.text = metadataObj.stringValue
             }
         }
     }

@@ -10,7 +10,7 @@ import UIKit
 
 class SimpleInfoVC: UIViewController {
 
-    var placeId = 0
+    var placeId = 1
     @IBOutlet weak var placeImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
@@ -20,6 +20,7 @@ class SimpleInfoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataInit()
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     func dataInit() {
@@ -35,7 +36,9 @@ class SimpleInfoVC: UIViewController {
     }
     
     @IBAction func stampAction(_ sender: UIButton) {
-    
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "saveStampVC") as! saveStampVC
+        vc.placeId = self.placeId
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     

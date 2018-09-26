@@ -28,6 +28,7 @@ struct RankListService: APIService, RequestService {
                 break
             case .error(let errCode):
                 error(errCode)
+                print("랭킹실패")
             }
         }
     }

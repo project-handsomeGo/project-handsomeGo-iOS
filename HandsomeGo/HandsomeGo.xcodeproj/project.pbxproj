@@ -33,6 +33,8 @@
 		CB056854215A291300323BFF /* StampStatusData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB056853215A291200323BFF /* StampStatusData.swift */; };
 		CB39B082215A49C300446F6E /* StampStatusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39B081215A49C200446F6E /* StampStatusService.swift */; };
 		CB39B084215BC0F100446F6E /* SimpleInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39B083215BC0F100446F6E /* SimpleInfoVC.swift */; };
+		CB39B086215BDD0400446F6E /* saveStampVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39B085215BDD0400446F6E /* saveStampVC.swift */; };
+		CB39B088215BE0C100446F6E /* placeNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39B087215BE0C100446F6E /* placeNaviVC.swift */; };
 		CB564D81213EB1D400E54961 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D80213EB1D400E54961 /* AppDelegate.swift */; };
 		CB564D86213EB1D400E54961 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB564D84213EB1D400E54961 /* Main.storyboard */; };
 		CB564D88213EB1E000E54961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB564D87213EB1E000E54961 /* Assets.xcassets */; };
@@ -72,6 +74,8 @@
 		CB056853215A291200323BFF /* StampStatusData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampStatusData.swift; sourceTree = "<group>"; };
 		CB39B081215A49C200446F6E /* StampStatusService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampStatusService.swift; sourceTree = "<group>"; };
 		CB39B083215BC0F100446F6E /* SimpleInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInfoVC.swift; sourceTree = "<group>"; };
+		CB39B085215BDD0400446F6E /* saveStampVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveStampVC.swift; sourceTree = "<group>"; };
+		CB39B087215BE0C100446F6E /* placeNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placeNaviVC.swift; sourceTree = "<group>"; };
 		CB564D7D213EB1D400E54961 /* HandsomeGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandsomeGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB564D80213EB1D400E54961 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB564D85213EB1D400E54961 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 				CB05682D214F85A600323BFF /* ProfileChangeVC.swift */,
 				CB05685121580A9F00323BFF /* TabBarVC.swift */,
 				CB39B083215BC0F100446F6E /* SimpleInfoVC.swift */,
+				CB39B085215BDD0400446F6E /* saveStampVC.swift */,
+				CB39B087215BE0C100446F6E /* placeNaviVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 				CB05682E214F85A600323BFF /* ProfileChangeVC.swift in Sources */,
 				CB0568462157C3AA00323BFF /* UIImageVIew+imageFromUrl.swift in Sources */,
 				CB564D97213ECCC200E54961 /* QRcodeTabVC.swift in Sources */,
+				CB39B088215BE0C100446F6E /* placeNaviVC.swift in Sources */,
 				CB05683C2157A89200323BFF /* ResponseData.swift in Sources */,
 				CB0568422157C00C00323BFF /* RankListData.swift in Sources */,
 				CB0568372157A7EB00323BFF /* HTTPStatusCode.swift in Sources */,
@@ -377,6 +384,7 @@
 				CB564D81213EB1D400E54961 /* AppDelegate.swift in Sources */,
 				CB564D9F2146645400E54961 /* RankCell.swift in Sources */,
 				CB0568402157BE7A00323BFF /* PlaceService.swift in Sources */,
+				CB39B086215BDD0400446F6E /* saveStampVC.swift in Sources */,
 				CB39B084215BC0F100446F6E /* SimpleInfoVC.swift in Sources */,
 				CB056815214B98BC00323BFF /* StampCell.swift in Sources */,
 				CB05682C214BBE1000323BFF /* InfoCell.swift in Sources */,

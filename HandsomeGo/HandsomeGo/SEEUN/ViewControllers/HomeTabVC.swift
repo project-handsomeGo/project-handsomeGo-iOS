@@ -172,7 +172,7 @@ extension HomeTabVC: UIScrollViewDelegate {
         mapDetailView.layer.shadowOffset = CGSize(width: 0, height: 3)
         mapDetailView.layer.shadowOpacity = 0.15
         
-        detailBtn.layer.cornerRadius = 27/2*self.view.frame.width/375
+        detailBtn.layer.cornerRadius = 25.5/2*self.view.frame.width/375
 
     }
         

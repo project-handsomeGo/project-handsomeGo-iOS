@@ -16,7 +16,7 @@ struct RankListData: Codable {
 struct RankPlace: Codable {
     let placeID: Int
     let placeName: String
-    let placeStar: Int
+    let placeStar: Double
     let placeCategory: String
     
     enum CodingKeys: String, CodingKey {

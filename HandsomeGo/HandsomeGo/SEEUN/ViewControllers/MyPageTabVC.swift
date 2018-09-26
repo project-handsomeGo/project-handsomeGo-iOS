@@ -111,7 +111,6 @@ extension MyPageTabVC:  UITableViewDelegate, UITableViewDataSource {
             
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.sssZ"
-            
             dateFormatter.timeZone = TimeZone.current
             let originDate = dateFormatter.date(from: profile.lastStampDate)
             dateFormatter.dateFormat = "yyyy.MM.dd"
