@@ -67,11 +67,13 @@ class MyPageTabVC: UIViewController {
             }
             
         }) { (err) in
+            print("스태ㅁ프에러")
             
         }
         MyPageService.shareInstance.getMyPage(token: token, completion: { (profile) in
             self.myProfile = profile
         }) { (err) in
+             print("마이페이지에러")
         }
     }
     

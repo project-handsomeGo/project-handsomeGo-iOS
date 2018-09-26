@@ -43,6 +43,7 @@
 		CB564D9D214661DC00E54961 /* HomeTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D9C214661DC00E54961 /* HomeTabVC.swift */; };
 		CB564D9F2146645400E54961 /* RankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D9E2146645400E54961 /* RankCell.swift */; };
 		CB564DCA2146D4E200E54961 /* MyPageTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564DC92146D4E200E54961 /* MyPageTabVC.swift */; };
+		CB5B3507215BFBBC008C97D1 /* PlaceInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5B3506215BFBBC008C97D1 /* PlaceInfoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		CB564D9C214661DC00E54961 /* HomeTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabVC.swift; sourceTree = "<group>"; };
 		CB564D9E2146645400E54961 /* RankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCell.swift; sourceTree = "<group>"; };
 		CB564DC92146D4E200E54961 /* MyPageTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTabVC.swift; sourceTree = "<group>"; };
+		CB5B3506215BFBBC008C97D1 /* PlaceInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 				CB056827214BB61D00323BFF /* StampListCell.swift */,
 				CB056814214B98BC00323BFF /* StampCell.swift */,
 				CB05682B214BBE1000323BFF /* InfoCell.swift */,
+				CB5B3506215BFBBC008C97D1 /* PlaceInfoCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				CB0568312157A76C00323BFF /* APIServices.swift in Sources */,
 				CB056854215A291300323BFF /* StampStatusData.swift in Sources */,
 				CB0568332157A79A00323BFF /* RankListService.swift in Sources */,
+				CB5B3507215BFBBC008C97D1 /* PlaceInfoCell.swift in Sources */,
 				CB05685221580A9F00323BFF /* TabBarVC.swift in Sources */,
 				CB05682E214F85A600323BFF /* ProfileChangeVC.swift in Sources */,
 				CB0568462157C3AA00323BFF /* UIImageVIew+imageFromUrl.swift in Sources */,

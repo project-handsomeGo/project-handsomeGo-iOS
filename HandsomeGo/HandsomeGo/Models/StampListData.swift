@@ -22,9 +22,10 @@ struct DataClass: Codable {
 struct StampPlace: Codable {
     let placeID: Int
     let placeName, placeAddress: String
-    let placeStar: Int
+    let placeStar: Double
     let placePic: String
     let stampStatus: Int
+    let stampPic: String
     
     enum CodingKeys: String, CodingKey {
         case placeID = "place_id"
@@ -33,5 +34,6 @@ struct StampPlace: Codable {
         case placeStar = "place_star"
         case placePic = "place_pic"
         case stampStatus = "stamp_status"
+        case stampPic = "stamp_pic"
     }
 }
