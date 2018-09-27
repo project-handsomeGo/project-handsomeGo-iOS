@@ -30,7 +30,9 @@ class MyPageTabVC: UIViewController {
     
     var opened = false {
         didSet {
-            infoTableView.reloadData()
+            if myProfile != nil {
+                infoTableView.reloadData()
+            }
         }
     }
     

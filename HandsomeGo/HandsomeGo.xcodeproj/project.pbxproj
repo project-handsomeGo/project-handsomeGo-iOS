@@ -57,6 +57,8 @@
 		CB564D9F2146645400E54961 /* RankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D9E2146645400E54961 /* RankCell.swift */; };
 		CB564DCA2146D4E200E54961 /* MyPageTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564DC92146D4E200E54961 /* MyPageTabVC.swift */; };
 		CB5B3507215BFBBC008C97D1 /* PlaceInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5B3506215BFBBC008C97D1 /* PlaceInfoCell.swift */; };
+		CBD910E1215CB2EF00BEC227 /* StampSaveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD910E0215CB2EF00BEC227 /* StampSaveService.swift */; };
+		CBD910E3215CB9E300BEC227 /* mypageNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD910E2215CB9E300BEC227 /* mypageNaviVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +117,8 @@
 		CB564D9E2146645400E54961 /* RankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCell.swift; sourceTree = "<group>"; };
 		CB564DC92146D4E200E54961 /* MyPageTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTabVC.swift; sourceTree = "<group>"; };
 		CB5B3506215BFBBC008C97D1 /* PlaceInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoCell.swift; sourceTree = "<group>"; };
+		CBD910E0215CB2EF00BEC227 /* StampSaveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampSaveService.swift; sourceTree = "<group>"; };
+		CBD910E2215CB9E300BEC227 /* mypageNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mypageNaviVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,7 @@
 				CB0568492157D80F00323BFF /* MyPageService.swift */,
 				CB05684D2157EE0E00323BFF /* StampListService.swift */,
 				CB39B081215A49C200446F6E /* StampStatusService.swift */,
+				CBD910E0215CB2EF00BEC227 /* StampSaveService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				CB39B083215BC0F100446F6E /* SimpleInfoVC.swift */,
 				CB39B085215BDD0400446F6E /* saveStampVC.swift */,
 				CB39B087215BE0C100446F6E /* placeNaviVC.swift */,
+				CBD910E2215CB9E300BEC227 /* mypageNaviVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -435,11 +441,13 @@
 				CB056854215A291300323BFF /* StampStatusData.swift in Sources */,
 				CB0568332157A79A00323BFF /* RankListService.swift in Sources */,
 				CB5B3507215BFBBC008C97D1 /* PlaceInfoCell.swift in Sources */,
+				CBD910E3215CB9E300BEC227 /* mypageNaviVC.swift in Sources */,
 				CB05685221580A9F00323BFF /* TabBarVC.swift in Sources */,
 				94606033215C2E07001E6E18 /* LoginService.swift in Sources */,
 				CB05682E214F85A600323BFF /* ProfileChangeVC.swift in Sources */,
 				CB0568462157C3AA00323BFF /* UIImageVIew+imageFromUrl.swift in Sources */,
 				94606045215C313C001E6E18 /* ReviewCVC.swift in Sources */,
+				CBD910E1215CB2EF00BEC227 /* StampSaveService.swift in Sources */,
 				94606039215C2E6E001E6E18 /* RegisterService.swift in Sources */,
 				9460603C215C2EC7001E6E18 /* PlaceVC.swift in Sources */,
 				CB564D97213ECCC200E54961 /* QRcodeTabVC.swift in Sources */,
