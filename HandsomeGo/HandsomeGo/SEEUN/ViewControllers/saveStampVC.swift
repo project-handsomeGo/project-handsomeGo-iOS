@@ -26,11 +26,7 @@ class saveStampVC: UIViewController {
     }
     
     @IBAction func saveAction(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
-        
-        let mypageVC = vc.childViewControllers[2] as! mypageNaviVC
-        mypageVC.opened = true
-        vc.selectedIndex = 2
+        //마이페이지로 화면전환
     }
     
     func dataInit() {

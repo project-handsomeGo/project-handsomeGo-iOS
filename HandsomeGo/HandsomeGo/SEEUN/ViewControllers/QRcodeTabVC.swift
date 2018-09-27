@@ -75,7 +75,16 @@ class QRcodeTabVC: UIViewController{
             view.addSubview(qrCodeFrameView)
             view.bringSubview(toFront: qrCodeFrameView)
         }
+        
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(dismissNoti), name: NSNotification.Name("dismissNoti") , object: nil)
+        
     }
+    
+    @objc func dismissNoti(noti:Notification) {
+        self.dismiss(animated: false)
+    }
+    
    
     // MARK: - Helper methods
     func launchApp(decodedURL: String) {
