@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		437EB87D3DE4377A6BCD9282 /* Pods_HandsomeGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E294C07B4C757A06343C5F /* Pods_HandsomeGo.framework */; };
+		9460602F215C2DF3001E6E18 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9460602E215C2DF3001E6E18 /* Login.storyboard */; };
+		94606031215C2DFB001E6E18 /* Place.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94606030215C2DFB001E6E18 /* Place.storyboard */; };
+		94606033215C2E07001E6E18 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94606032215C2E07001E6E18 /* LoginService.swift */; };
+		94606035215C2E30001E6E18 /* ReviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94606034215C2E30001E6E18 /* ReviewData.swift */; };
+		94606037215C2E3E001E6E18 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94606036215C2E3E001E6E18 /* ReviewService.swift */; };
+		94606039215C2E6E001E6E18 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94606038215C2E6E001E6E18 /* RegisterService.swift */; };
+		9460603C215C2EC7001E6E18 /* PlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9460603B215C2EC7001E6E18 /* PlaceVC.swift */; };
+		9460603E215C2ED6001E6E18 /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9460603D215C2ED6001E6E18 /* ReviewVC.swift */; };
+		94606040215C2EE6001E6E18 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9460603F215C2EE6001E6E18 /* LoginVC.swift */; };
+		94606043215C3115001E6E18 /* PlaceNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94606042215C3115001E6E18 /* PlaceNC.swift */; };
+		94606045215C313C001E6E18 /* ReviewCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94606044215C313C001E6E18 /* ReviewCVC.swift */; };
+		94606047215C65B3001E6E18 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94606046215C65B3001E6E18 /* KakaoOpenSDK.framework */; };
+		9460604A215C73C3001E6E18 /* KakaoCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94606049215C73C3001E6E18 /* KakaoCommon.framework */; };
 		CB056815214B98BC00323BFF /* StampCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB056814214B98BC00323BFF /* StampCell.swift */; };
 		CB056824214BA7CE00323BFF /* NanumSquareOTFRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB056821214BA7CA00323BFF /* NanumSquareOTFRegular.otf */; };
 		CB056825214BA7CE00323BFF /* NanumSquareOTFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB056822214BA7CB00323BFF /* NanumSquareOTFBold.otf */; };
@@ -44,23 +57,26 @@
 		CB564D9F2146645400E54961 /* RankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D9E2146645400E54961 /* RankCell.swift */; };
 		CB564DCA2146D4E200E54961 /* MyPageTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564DC92146D4E200E54961 /* MyPageTabVC.swift */; };
 		CB5B3507215BFBBC008C97D1 /* PlaceInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5B3506215BFBBC008C97D1 /* PlaceInfoCell.swift */; };
-		CB5B350E215C9C44008C97D1 /* ReviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5B350A215C9C42008C97D1 /* ReviewData.swift */; };
-		CB5B350F215C9C44008C97D1 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5B350B215C9C42008C97D1 /* RegisterService.swift */; };
-		CB5B3510215C9C44008C97D1 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5B350C215C9C43008C97D1 /* LoginService.swift */; };
-		CB5B3511215C9C44008C97D1 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5B350D215C9C43008C97D1 /* ReviewService.swift */; };
-		CB5B3519215C9C52008C97D1 /* Place.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5B3512215C9C4F008C97D1 /* Place.storyboard */; };
-		CB5B351A215C9C52008C97D1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5B3513215C9C4F008C97D1 /* Login.storyboard */; };
-		CB5B351B215C9C52008C97D1 /* PlaceNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5B3514215C9C4F008C97D1 /* PlaceNC.swift */; };
-		CB5B351C215C9C52008C97D1 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5B3515215C9C50008C97D1 /* LoginVC.swift */; };
-		CB5B351D215C9C52008C97D1 /* PlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5B3516215C9C50008C97D1 /* PlaceVC.swift */; };
-		CB5B351E215C9C52008C97D1 /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5B3517215C9C51008C97D1 /* ReviewVC.swift */; };
-		CB5B351F215C9C52008C97D1 /* ReviewCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5B3518215C9C51008C97D1 /* ReviewCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		045836E2E9F8C71632765EDA /* Pods-HandsomeGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandsomeGo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HandsomeGo/Pods-HandsomeGo.debug.xcconfig"; sourceTree = "<group>"; };
 		279487331DB3AAD17BB8D3DE /* Pods-HandsomeGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandsomeGo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HandsomeGo/Pods-HandsomeGo.release.xcconfig"; sourceTree = "<group>"; };
 		58E294C07B4C757A06343C5F /* Pods_HandsomeGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HandsomeGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9460602E215C2DF3001E6E18 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		94606030215C2DFB001E6E18 /* Place.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Place.storyboard; sourceTree = "<group>"; };
+		94606032215C2E07001E6E18 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		94606034215C2E30001E6E18 /* ReviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewData.swift; sourceTree = "<group>"; };
+		94606036215C2E3E001E6E18 /* ReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
+		94606038215C2E6E001E6E18 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		9460603B215C2EC7001E6E18 /* PlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceVC.swift; sourceTree = "<group>"; };
+		9460603D215C2ED6001E6E18 /* ReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
+		9460603F215C2EE6001E6E18 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		94606042215C3115001E6E18 /* PlaceNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNC.swift; sourceTree = "<group>"; };
+		94606044215C313C001E6E18 /* ReviewCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCVC.swift; sourceTree = "<group>"; };
+		94606046215C65B3001E6E18 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		94606048215C7000001E6E18 /* Bringing-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bringing-Header.h"; sourceTree = "<group>"; };
+		94606049215C73C3001E6E18 /* KakaoCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoCommon.framework; sourceTree = "<group>"; };
 		CB056814214B98BC00323BFF /* StampCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampCell.swift; sourceTree = "<group>"; };
 		CB056821214BA7CA00323BFF /* NanumSquareOTFRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFRegular.otf; sourceTree = "<group>"; };
 		CB056822214BA7CB00323BFF /* NanumSquareOTFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFBold.otf; sourceTree = "<group>"; };
@@ -99,17 +115,6 @@
 		CB564D9E2146645400E54961 /* RankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCell.swift; sourceTree = "<group>"; };
 		CB564DC92146D4E200E54961 /* MyPageTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTabVC.swift; sourceTree = "<group>"; };
 		CB5B3506215BFBBC008C97D1 /* PlaceInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoCell.swift; sourceTree = "<group>"; };
-		CB5B350A215C9C42008C97D1 /* ReviewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewData.swift; sourceTree = "<group>"; };
-		CB5B350B215C9C42008C97D1 /* RegisterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
-		CB5B350C215C9C43008C97D1 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		CB5B350D215C9C43008C97D1 /* ReviewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
-		CB5B3512215C9C4F008C97D1 /* Place.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Place.storyboard; sourceTree = "<group>"; };
-		CB5B3513215C9C4F008C97D1 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		CB5B3514215C9C4F008C97D1 /* PlaceNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceNC.swift; sourceTree = "<group>"; };
-		CB5B3515215C9C50008C97D1 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		CB5B3516215C9C50008C97D1 /* PlaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceVC.swift; sourceTree = "<group>"; };
-		CB5B3517215C9C51008C97D1 /* ReviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
-		CB5B3518215C9C51008C97D1 /* ReviewCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +123,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				437EB87D3DE4377A6BCD9282 /* Pods_HandsomeGo.framework in Frameworks */,
+				9460604A215C73C3001E6E18 /* KakaoCommon.framework in Frameworks */,
+				94606047215C65B3001E6E18 /* KakaoOpenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +138,32 @@
 				279487331DB3AAD17BB8D3DE /* Pods-HandsomeGo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9460602D215C2DE3001E6E18 /* YEWON */ = {
+			isa = PBXGroup;
+			children = (
+				9460603A215C2EA5001E6E18 /* Service,Model */,
+				9460602E215C2DF3001E6E18 /* Login.storyboard */,
+				9460603F215C2EE6001E6E18 /* LoginVC.swift */,
+				94606030215C2DFB001E6E18 /* Place.storyboard */,
+				9460603B215C2EC7001E6E18 /* PlaceVC.swift */,
+				9460603D215C2ED6001E6E18 /* ReviewVC.swift */,
+				94606042215C3115001E6E18 /* PlaceNC.swift */,
+				94606044215C313C001E6E18 /* ReviewCVC.swift */,
+			);
+			path = YEWON;
+			sourceTree = "<group>";
+		};
+		9460603A215C2EA5001E6E18 /* Service,Model */ = {
+			isa = PBXGroup;
+			children = (
+				94606032215C2E07001E6E18 /* LoginService.swift */,
+				94606034215C2E30001E6E18 /* ReviewData.swift */,
+				94606036215C2E3E001E6E18 /* ReviewService.swift */,
+				94606038215C2E6E001E6E18 /* RegisterService.swift */,
+			);
+			path = "Service,Model";
 			sourceTree = "<group>";
 		};
 		CB056818214B9BC400323BFF /* Fonts */ = {
@@ -201,7 +234,7 @@
 		CB564D7F213EB1D400E54961 /* HandsomeGo */ = {
 			isa = PBXGroup;
 			children = (
-				CB5B3508215C9C0C008C97D1 /* YEWON */,
+				9460602D215C2DE3001E6E18 /* YEWON */,
 				CB0568442157C39400323BFF /* Utils */,
 				CB056818214B9BC400323BFF /* Fonts */,
 				CB05682F2157A74F00323BFF /* Services */,
@@ -211,6 +244,7 @@
 				CB564D87213EB1E000E54961 /* Assets.xcassets */,
 				CB564D89213EB1E000E54961 /* LaunchScreen.storyboard */,
 				CB564D8C213EB1E000E54961 /* Info.plist */,
+				94606048215C7000001E6E18 /* Bringing-Header.h */,
 			);
 			path = HandsomeGo;
 			sourceTree = "<group>";
@@ -260,35 +294,11 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		CB5B3508215C9C0C008C97D1 /* YEWON */ = {
-			isa = PBXGroup;
-			children = (
-				CB5B3513215C9C4F008C97D1 /* Login.storyboard */,
-				CB5B3512215C9C4F008C97D1 /* Place.storyboard */,
-				CB5B3515215C9C50008C97D1 /* LoginVC.swift */,
-				CB5B3514215C9C4F008C97D1 /* PlaceNC.swift */,
-				CB5B3516215C9C50008C97D1 /* PlaceVC.swift */,
-				CB5B3518215C9C51008C97D1 /* ReviewCVC.swift */,
-				CB5B3517215C9C51008C97D1 /* ReviewVC.swift */,
-				CB5B3509215C9C37008C97D1 /* Service,Model */,
-			);
-			path = YEWON;
-			sourceTree = "<group>";
-		};
-		CB5B3509215C9C37008C97D1 /* Service,Model */ = {
-			isa = PBXGroup;
-			children = (
-				CB5B350C215C9C43008C97D1 /* LoginService.swift */,
-				CB5B350B215C9C42008C97D1 /* RegisterService.swift */,
-				CB5B350A215C9C42008C97D1 /* ReviewData.swift */,
-				CB5B350D215C9C43008C97D1 /* ReviewService.swift */,
-			);
-			path = "Service,Model";
-			sourceTree = "<group>";
-		};
 		F160A503D70F6DC111BD7FF6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94606049215C73C3001E6E18 /* KakaoCommon.framework */,
+				94606046215C65B3001E6E18 /* KakaoOpenSDK.framework */,
 				58E294C07B4C757A06343C5F /* Pods_HandsomeGo.framework */,
 			);
 			name = Frameworks;
@@ -355,13 +365,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB5B351A215C9C52008C97D1 /* Login.storyboard in Resources */,
 				CB564D8B213EB1E000E54961 /* LaunchScreen.storyboard in Resources */,
 				CB564D88213EB1E000E54961 /* Assets.xcassets in Resources */,
+				9460602F215C2DF3001E6E18 /* Login.storyboard in Resources */,
 				CB056824214BA7CE00323BFF /* NanumSquareOTFRegular.otf in Resources */,
+				94606031215C2DFB001E6E18 /* Place.storyboard in Resources */,
 				CB056825214BA7CE00323BFF /* NanumSquareOTFBold.otf in Resources */,
 				CB056826214BA7CE00323BFF /* NanumSquareOTFExtraBold.otf in Resources */,
-				CB5B3519215C9C52008C97D1 /* Place.storyboard in Resources */,
 				CB564D86213EB1D400E54961 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,39 +428,39 @@
 			files = (
 				CB05684C2157ED7B00323BFF /* StampListData.swift in Sources */,
 				CB05684A2157D81000323BFF /* MyPageService.swift in Sources */,
+				94606043215C3115001E6E18 /* PlaceNC.swift in Sources */,
 				CB056828214BB61D00323BFF /* StampListCell.swift in Sources */,
 				CB05684E2157EE0E00323BFF /* StampListService.swift in Sources */,
 				CB0568312157A76C00323BFF /* APIServices.swift in Sources */,
 				CB056854215A291300323BFF /* StampStatusData.swift in Sources */,
-				CB5B350F215C9C44008C97D1 /* RegisterService.swift in Sources */,
 				CB0568332157A79A00323BFF /* RankListService.swift in Sources */,
 				CB5B3507215BFBBC008C97D1 /* PlaceInfoCell.swift in Sources */,
 				CB05685221580A9F00323BFF /* TabBarVC.swift in Sources */,
+				94606033215C2E07001E6E18 /* LoginService.swift in Sources */,
 				CB05682E214F85A600323BFF /* ProfileChangeVC.swift in Sources */,
 				CB0568462157C3AA00323BFF /* UIImageVIew+imageFromUrl.swift in Sources */,
+				94606045215C313C001E6E18 /* ReviewCVC.swift in Sources */,
+				94606039215C2E6E001E6E18 /* RegisterService.swift in Sources */,
+				9460603C215C2EC7001E6E18 /* PlaceVC.swift in Sources */,
 				CB564D97213ECCC200E54961 /* QRcodeTabVC.swift in Sources */,
-				CB5B351F215C9C52008C97D1 /* ReviewCVC.swift in Sources */,
 				CB39B088215BE0C100446F6E /* placeNaviVC.swift in Sources */,
-				CB5B351D215C9C52008C97D1 /* PlaceVC.swift in Sources */,
-				CB5B351C215C9C52008C97D1 /* LoginVC.swift in Sources */,
 				CB05683C2157A89200323BFF /* ResponseData.swift in Sources */,
 				CB0568422157C00C00323BFF /* RankListData.swift in Sources */,
+				94606037215C2E3E001E6E18 /* ReviewService.swift in Sources */,
 				CB0568372157A7EB00323BFF /* HTTPStatusCode.swift in Sources */,
-				CB5B3511215C9C44008C97D1 /* ReviewService.swift in Sources */,
 				CB05683E2157A97500323BFF /* PlaceData.swift in Sources */,
 				CB564DCA2146D4E200E54961 /* MyPageTabVC.swift in Sources */,
-				CB5B350E215C9C44008C97D1 /* ReviewData.swift in Sources */,
 				CB564D9D214661DC00E54961 /* HomeTabVC.swift in Sources */,
-				CB5B351B215C9C52008C97D1 /* PlaceNC.swift in Sources */,
+				94606040215C2EE6001E6E18 /* LoginVC.swift in Sources */,
 				CB39B082215A49C300446F6E /* StampStatusService.swift in Sources */,
-				CB5B351E215C9C52008C97D1 /* ReviewVC.swift in Sources */,
 				CB564D81213EB1D400E54961 /* AppDelegate.swift in Sources */,
 				CB564D9F2146645400E54961 /* RankCell.swift in Sources */,
+				94606035215C2E30001E6E18 /* ReviewData.swift in Sources */,
 				CB0568402157BE7A00323BFF /* PlaceService.swift in Sources */,
+				9460603E215C2ED6001E6E18 /* ReviewVC.swift in Sources */,
 				CB39B086215BDD0400446F6E /* saveStampVC.swift in Sources */,
 				CB39B084215BC0F100446F6E /* SimpleInfoVC.swift in Sources */,
 				CB056815214B98BC00323BFF /* StampCell.swift in Sources */,
-				CB5B3510215C9C44008C97D1 /* LoginService.swift in Sources */,
 				CB05682C214BBE1000323BFF /* InfoCell.swift in Sources */,
 				CB0568392157A7EB00323BFF /* RequestService.swift in Sources */,
 				CB0568382157A7EB00323BFF /* NetworkResult.swift in Sources */,
@@ -600,8 +610,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N6JH7RBUA4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HandsomeGo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pkse1213.HandsomeGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -616,8 +640,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N6JH7RBUA4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HandsomeGo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pkse1213.HandsomeGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

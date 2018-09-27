@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l7i-Mk-ZYt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l7i-Mk-ZYt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -390,7 +389,7 @@
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="star_blank" translatesAutoresizingMaskIntoConstraints="NO" id="A4v-86-I8b">
                                                         <rect key="frame" x="136.5" y="50" width="24" height="24"/>
                                                     </imageView>
-                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="star_blank" translatesAutoresizingMaskIntoConstraints="NO" id="YYL-fU-UMh">
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="YYL-fU-UMh">
                                                         <rect key="frame" x="97.5" y="50" width="24" height="24"/>
                                                     </imageView>
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="star_blank" translatesAutoresizingMaskIntoConstraints="NO" id="snZ-V2-sh3">
@@ -851,11 +850,11 @@
     </scenes>
     <resources>
         <image name="addReviewSeparator" width="345" height="2"/>
-        <image name="dismissBtn" width="17" height="16"/>
+        <image name="dismissBtn" width="24" height="24"/>
         <image name="photoBtn" width="83" height="83"/>
         <image name="rightArrowBtn" width="8" height="13"/>
         <image name="smallSeparator" width="2" height="9"/>
-        <image name="star" width="26" height="25"/>
+        <image name="star" width="31" height="30"/>
         <image name="star_blank" width="31" height="30"/>
     </resources>
 </document>

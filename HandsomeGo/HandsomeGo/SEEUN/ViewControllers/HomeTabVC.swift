@@ -99,7 +99,13 @@ class HomeTabVC: UIViewController {
         rankUnderBar.isHidden = true
         rankView.isHidden = true
     }
-    
+    @IBAction func placeBtnAct(_ sender: UIButton) {
+        let naviVc = UIStoryboard(name: "Place", bundle:nil ).instantiateViewController(withIdentifier: "PlaceNC") as! PlaceNC
+        let vc = naviVc.viewControllers.first as! PlaceVC
+        vc.tempPlace = self.choosedPlace
+        self.present(naviVc, animated: true, completion: nil)
+    }
+
     @IBAction func mapTapAction(_ sender: UIButton) {
         
         rankUnderBar.isHidden = true
