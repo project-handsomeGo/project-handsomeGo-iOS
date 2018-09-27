@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b6X-RJ-qx1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LoginVC-->
+        <scene sceneID="OFn-0E-0aM">
+            <objects>
+                <viewController restorationIdentifier="LoginVC" storyboardIdentifier="LoginVC" id="b6X-RJ-qx1" customClass="LoginVC" customModule="HandsomeGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X3r-ch-5nf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBg" translatesAutoresizingMaskIntoConstraints="NO" id="5AD-2I-UHK">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eC-a1-o5P">
+                                <rect key="frame" x="74.5" y="333" width="226" height="66"/>
+                                <state key="normal" image="kakaoLoginBtn"/>
+                                <connections>
+                                    <action selector="loginBtnAct:" destination="b6X-RJ-qx1" eventType="touchUpInside" id="jMi-zr-Ga2"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OGl-XO-xim">
+                                <rect key="frame" x="131.5" y="131" width="112" height="112"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="6pW-2D-OJF"/>
+                                    <constraint firstAttribute="width" constant="112" id="V5K-X1-vC5"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsK-ZI-Yts">
+                                <rect key="frame" x="81.5" y="399" width="212" height="52"/>
+                                <state key="normal" image="guestLoginBtn"/>
+                                <connections>
+                                    <action selector="guestBtnAct:" destination="b6X-RJ-qx1" eventType="touchUpInside" id="lAV-jy-s33"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQB-IL-oes">
+                                <rect key="frame" x="162" y="268" width="52" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="kakaoBtn:" destination="b6X-RJ-qx1" eventType="touchUpInside" id="MXw-IW-Y9Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5AD-2I-UHK" firstAttribute="height" secondItem="X3r-ch-5nf" secondAttribute="height" id="1jU-uK-KGb"/>
+                            <constraint firstItem="xsK-ZI-Yts" firstAttribute="top" secondItem="2eC-a1-o5P" secondAttribute="bottom" id="6dM-5f-oJb"/>
+                            <constraint firstItem="5AD-2I-UHK" firstAttribute="width" secondItem="X3r-ch-5nf" secondAttribute="width" id="8kQ-7X-nrr"/>
+                            <constraint firstItem="OGl-XO-xim" firstAttribute="top" secondItem="OkF-z5-ruE" secondAttribute="top" constant="111" id="A7k-Jc-obz"/>
+                            <constraint firstItem="5AD-2I-UHK" firstAttribute="centerY" secondItem="OkF-z5-ruE" secondAttribute="centerY" id="BUW-Bz-L6f"/>
+                            <constraint firstItem="xsK-ZI-Yts" firstAttribute="centerX" secondItem="5AD-2I-UHK" secondAttribute="centerX" id="HZf-d0-IRN"/>
+                            <constraint firstItem="2eC-a1-o5P" firstAttribute="centerX" secondItem="5AD-2I-UHK" secondAttribute="centerX" id="Jay-Mt-kWh"/>
+                            <constraint firstItem="2eC-a1-o5P" firstAttribute="top" secondItem="OGl-XO-xim" secondAttribute="bottom" constant="90" id="YEf-Zl-Trn"/>
+                            <constraint firstItem="OGl-XO-xim" firstAttribute="centerX" secondItem="5AD-2I-UHK" secondAttribute="centerX" id="bvH-Vm-lKG"/>
+                            <constraint firstItem="5AD-2I-UHK" firstAttribute="centerX" secondItem="OkF-z5-ruE" secondAttribute="centerX" id="oJ9-8v-dF5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OkF-z5-ruE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdp-KT-87Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="guestLoginBtn" width="212" height="52"/>
+        <image name="kakaoLoginBtn" width="226" height="66"/>
+        <image name="loginBg" width="375" height="667"/>
+    </resources>
+</document>
