@@ -91,13 +91,23 @@ class MyPageTabVC: UIViewController {
             }
             
         }) { (err) in
-            print("스태ㅁ프에러")
+            let message = UIAlertController(title: "알림", message: "네트워크 연결상태를 확인하세요", preferredStyle: .alert)
+            let ok = UIAlertAction(title:"확인", style: UIAlertActionStyle.default){
+                (UIAlertAction) in
+            }
+            message.addAction(ok)
+            self.present(message, animated: true, completion: nil)
             
         }
         MyPageService.shareInstance.getMyPage(token: token, completion: { (profile) in
             self.myProfile = profile
         }) { (err) in
-             print("마이페이지에러")
+            let message = UIAlertController(title: "알림", message: "네트워크 연결상태를 확인하세요", preferredStyle: .alert)
+            let ok = UIAlertAction(title:"확인", style: UIAlertActionStyle.default){
+                (UIAlertAction) in
+            }
+            message.addAction(ok)
+            self.present(message, animated: true, completion: nil)
         }
     }
     

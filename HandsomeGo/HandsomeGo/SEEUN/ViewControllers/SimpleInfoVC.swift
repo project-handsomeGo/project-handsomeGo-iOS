@@ -36,15 +36,26 @@ class SimpleInfoVC: UIViewController {
             self.place = place
             
         }) { (err) in
-            print("에러")
+            let message = UIAlertController(title: "알림", message: "네트워크 연결상태를 확인하세요", preferredStyle: .alert)
+            let ok = UIAlertAction(title:"확인", style: UIAlertActionStyle.default){
+                (UIAlertAction) in
+            }
+            message.addAction(ok)
+            self.present(message, animated: true, completion: nil)
         }
         
         StampStatusService.shareInstance.getStampStatus(token: token, stampId: placeId, completion: { (stamp) in
             if stamp.stampStatus == 1 {
                 self.stampStatus = stamp.stampStatus
-                self.saveButton.setTitle("홈으로 이동", for: .normal)
+                self.saveButton.setTitle("적립내역 보기", for: .normal)
             }
         }) { (err) in
+            let message = UIAlertController(title: "알림", message: "네트워크 연결상태를 확인하세요", preferredStyle: .alert)
+            let ok = UIAlertAction(title:"확인", style: UIAlertActionStyle.default){
+                (UIAlertAction) in
+            }
+            message.addAction(ok)
+            self.present(message, animated: true, completion: nil)
         }
     }
     
@@ -63,6 +74,12 @@ class SimpleInfoVC: UIViewController {
                     self.navigationController?.pushViewController(vc, animated: true)
                 }) { (err) in
                     
+                    let message = UIAlertController(title: "알림", message: "네트워크 연결상태를 확인하세요", preferredStyle: .alert)
+                    let ok = UIAlertAction(title:"확인", style: UIAlertActionStyle.default){
+                        (UIAlertAction) in
+                    }
+                    message.addAction(ok)
+                    self.present(message, animated: true, completion: nil)
                 }
                 
                 self.navigationController?.pushViewController(vc, animated: true)

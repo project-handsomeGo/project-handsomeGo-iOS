@@ -97,9 +97,7 @@ class QRcodeTabVC: UIViewController{
         guard let id = Int(decodedURL) else {return}
         
         StampStatusService.shareInstance.getStampStatus(token: token, stampId: id, completion: { (stamp) in
-            
-            let alertPrompt = UIAlertController(title: "\(stamp.placeName)", message:"\(stamp.placeName)" , preferredStyle: .actionSheet)
-            
+            let alertPrompt = UIAlertController(title: "\(stamp.placeName)", message: nil , preferredStyle: .actionSheet)
             let confirmAction = UIAlertAction(title: "상세보기", style: UIAlertActionStyle.default, handler: { (action) -> Void in
                 
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "placeNaviVC") as! placeNaviVC
@@ -114,6 +112,13 @@ class QRcodeTabVC: UIViewController{
             
             self.present(alertPrompt, animated: true, completion: nil)
         }) { (err) in
+            
+            let message = UIAlertController(title: "알림", message: "네트워크 연결상태를 확인하세요", preferredStyle: .alert)
+            let ok = UIAlertAction(title:"확인", style: UIAlertActionStyle.default){
+                (UIAlertAction) in
+            }
+            message.addAction(ok)
+            self.present(message, animated: true, completion: nil)
         }
     }
     

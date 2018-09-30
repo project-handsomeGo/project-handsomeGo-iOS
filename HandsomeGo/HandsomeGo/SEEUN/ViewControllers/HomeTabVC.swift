@@ -65,6 +65,12 @@ class HomeTabVC: UIViewController {
             self.rankingList = res
            
         }) { (err) in
+            let message = UIAlertController(title: "알림", message: "네트워크 연결상태를 확인하세요", preferredStyle: .alert)
+            let ok = UIAlertAction(title:"확인", style: UIAlertActionStyle.default){
+                (UIAlertAction) in
+            }
+            message.addAction(ok)
+            self.present(message, animated: true, completion: nil)
         }
     }
     
@@ -143,6 +149,12 @@ class HomeTabVC: UIViewController {
                 }
             }
         }) { (err) in
+            let message = UIAlertController(title: "알림", message: "네트워크 연결상태를 확인하세요", preferredStyle: .alert)
+            let ok = UIAlertAction(title:"확인", style: UIAlertActionStyle.default){
+                (UIAlertAction) in
+            }
+            message.addAction(ok)
+            self.present(message, animated: true, completion: nil)
         }
     }
     
@@ -233,6 +245,12 @@ extension HomeTabVC: UITableViewDelegate, UITableViewDataSource {
             vc.tempPlace = self.choosedPlace
             self.present(naviVc, animated: true, completion: nil)
         }) { (err) in
+            let message = UIAlertController(title: "알림", message: "네트워크 연결상태를 확인하세요", preferredStyle: .alert)
+            let ok = UIAlertAction(title:"확인", style: UIAlertActionStyle.default){
+                (UIAlertAction) in
+            }
+            message.addAction(ok)
+            self.present(message, animated: true, completion: nil)
         }
     }
     
