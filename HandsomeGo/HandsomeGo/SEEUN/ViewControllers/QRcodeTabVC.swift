@@ -11,7 +11,7 @@ import AVFoundation
 
 class QRcodeTabVC: UIViewController{
   
-    let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0MiwiaWF0IjoxNTM3MzYxNDI1LCJleHAiOjE1Mzk5NTM0MjV9.GNSbBt28VaJPlISjzP82WUhHONpAfR-VgLC84cZxhD0"
+    let token = UserDefaults.standard.string(forKey: "token")!
     
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var textLabel: UILabel!
@@ -40,6 +40,7 @@ class QRcodeTabVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //
         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back)
         
         guard let captureDevice = deviceDiscoverySession.devices.first else {

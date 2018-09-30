@@ -10,14 +10,6 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import UIKit
-/*
- 보내는것
- "id" : "카카오톡 로그인 한 후 반환받는 고유 ID",
- "name" : "카카오톡 로그인 한 후 반환받는 사용자 닉네임",
- "profileImagePath" : "카카오톡 로그인 한 후 반환받는 프로필 사진 경로"
- 받는것
- token: 사용자 토큰
- */
 
 struct LoginService:APIService{
     static func logInit(id:String, name:String, profileImagePath:String, completion : @escaping (String)->Void) {
@@ -35,6 +27,7 @@ struct LoginService:APIService{
                 if let value = res.result.value{
                     if (JSON(value)["message"].string! == "login success"){
                         completion(JSON(value)["token"].string!)
+                        
                     }
                 }
                 break

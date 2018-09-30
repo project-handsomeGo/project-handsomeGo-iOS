@@ -10,7 +10,7 @@ import UIKit
 
 class saveStampVC: UIViewController {
     var placeId = 0
-    let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0MiwiaWF0IjoxNTM3MzYxNDI1LCJleHAiOjE1Mzk5NTM0MjV9.GNSbBt28VaJPlISjzP82WUhHONpAfR-VgLC84cZxhD0"
+    let token = UserDefaults.standard.string(forKey: "token")!
     
     @IBOutlet weak var squareView: UIView!
     @IBOutlet weak var stampImageView: UIImageView!
@@ -26,7 +26,13 @@ class saveStampVC: UIViewController {
     }
     
     @IBAction func saveAction(_ sender: UIButton) {
+        
         //마이페이지로 화면전환
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
+        vc.selectedIndex = 2
+        
+        self.present(vc, animated: false, completion: nil)
     }
     
     func dataInit() {

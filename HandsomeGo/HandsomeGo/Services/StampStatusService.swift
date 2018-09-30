@@ -20,7 +20,7 @@ struct StampStatusService: APIService, RequestService{
     func getStampStatus(token: String, stampId: Int, completion: @escaping (StampStatus) -> Void, error: @escaping (Int) -> Void) {
         let StampURL = URL + "/\(stampId)"
         let header: HTTPHeaders = [
-            "Authorization" : token,
+            "Authorization" : UserDefaults.standard.string(forKey: "token")! ,
             "Content-Type" : "application/json"
         ]
         gettable(StampURL, body: nil, header: header) { res in

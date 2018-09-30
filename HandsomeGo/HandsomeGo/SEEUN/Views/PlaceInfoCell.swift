@@ -14,6 +14,7 @@ class PlaceInfoCell: UITableViewCell {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var reviewCntLabel: UILabel!
+    @IBOutlet weak var colorBar: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

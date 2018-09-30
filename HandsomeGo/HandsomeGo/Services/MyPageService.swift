@@ -19,7 +19,7 @@ struct MyPageService: APIService, RequestService{
     func getMyPage(token: String, completion: @escaping (Profile) -> Void, error: @escaping (Int) -> Void) {
        
         let header: HTTPHeaders = [
-            "Authorization" : token,
+            "Authorization" : UserDefaults.standard.string(forKey: "token")! ,
             "Content-Type" : "application/json"
         ]
         gettable(URL, body: nil, header: header) { res in
@@ -38,7 +38,7 @@ struct MyPageService: APIService, RequestService{
     
     func changeMyPage(token: String, name: String, photo: UIImage?, completion: @escaping () -> Void){
         let header: HTTPHeaders = [
-            "Authorization" : token,
+            "Authorization" : UserDefaults.standard.string(forKey: "token")! ,
             "Content-Type" : "application/json"
         ]
         

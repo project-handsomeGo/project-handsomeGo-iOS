@@ -16,7 +16,7 @@ struct ReviewResponse: Codable{
 struct ReviewListData: Codable{
     let message: String?
     let status: String?
-    let myComment: String?
+    let myComment: [ReviewList]?
     let comments: [ReviewList]
 }
 

@@ -9,7 +9,7 @@
 import UIKit
 
 class SimpleInfoVC: UIViewController {
-    let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0MiwiaWF0IjoxNTM3MzYxNDI1LCJleHAiOjE1Mzk5NTM0MjV9.GNSbBt28VaJPlISjzP82WUhHONpAfR-VgLC84cZxhD0"
+    let token = UserDefaults.standard.string(forKey: "token")!
     
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var placeTableView: UITableView!
@@ -42,7 +42,7 @@ class SimpleInfoVC: UIViewController {
         StampStatusService.shareInstance.getStampStatus(token: token, stampId: placeId, completion: { (stamp) in
             if stamp.stampStatus == 1 {
                 self.stampStatus = stamp.stampStatus
-                self.saveButton.setTitle("적립내역 보기", for: .normal)
+                self.saveButton.setTitle("홈으로 이동", for: .normal)
             }
         }) { (err) in
         }
@@ -58,7 +58,7 @@ class SimpleInfoVC: UIViewController {
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "saveStampVC") as! saveStampVC
                 vc.placeId = self.placeId
                 
-                StampSaveService.shareInstance.saveStamp(token: token, stampId: placeId, completion: { (res) in
+                StampSaveService.shareInstance.saveStamp(token: UserDefaults.standard.string(forKey: "token")!, stampId: placeId, completion: { (res) in
                     print(res)
                     self.navigationController?.pushViewController(vc, animated: true)
                 }) { (err) in
@@ -69,7 +69,11 @@ class SimpleInfoVC: UIViewController {
             
             } else if stampStatus == 1 {
                 
-             // 마이페이지로 화면전환
+                //홈으로 이동
+                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
+                vc.selectedIndex = 2
+                self.present(vc, animated: false, completion: nil)
                 
             }
         }
@@ -89,11 +93,16 @@ extension SimpleInfoVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = placeTableView.dequeueReusableCell(withIdentifier: "PlaceInfoCell") as! PlaceInfoCell
         if let place = place {
-        cell.placeImageView.imageFromUrl(place.placePic, defaultImgPath: "")
-        cell.nameLabel.text = place.placeName
-        cell.addressLabel.text = place.placeAddress
-        cell.infoLabel.text = place.placeContent
-        cell.reviewCntLabel.text = "\(place.commentCount)"
+            cell.placeImageView.imageFromUrl(place.placePic, defaultImgPath: "")
+            cell.nameLabel.text = place.placeName
+            cell.addressLabel.text = place.placeAddress
+            cell.infoLabel.text = place.placeContent
+            cell.reviewCntLabel.text = "\(place.commentCount)"
+            if place.placeCategory == "도시 건축"{
+                cell.colorBar.image = #imageLiteral(resourceName: "infoGreenBar")
+            } else if place.placeCategory == "역사 문화"{
+                cell.colorBar.image = #imageLiteral(resourceName: "infoOrangeBar")
+            }
         }
         return cell
     }

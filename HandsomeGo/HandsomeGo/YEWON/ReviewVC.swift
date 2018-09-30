@@ -32,7 +32,13 @@ class ReviewVC: UIViewController, UITextViewDelegate, UIImagePickerControllerDel
         let leftButtonItem = UIBarButtonItem(image: UIImage(named: "backBtn"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(popAction))
         leftButtonItem.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem = leftButtonItem
+        self.navigationItem.title = "리뷰 하기"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "NanumSquareOTFR", size: 17)!]
+        for i in 0...3{
+            photoImg[i].layer.masksToBounds = true
+            
+            photoImg[i].layer.cornerRadius = 5
+        }
     }
     @objc func popAction(){
         self.navigationController?.isNavigationBarHidden = true
@@ -40,11 +46,16 @@ class ReviewVC: UIViewController, UITextViewDelegate, UIImagePickerControllerDel
     }
     
     // star btn click
-    var score = 0
+    var score = 1
     @IBAction func starBtnAct(_ sender: UIButton) {
         for i in 0...4{
             if i < sender.tag {
-                starBtn[i].setBackgroundImage(UIImage(named:"star.png"), for: .normal)
+                
+                UIView.animate(withDuration: 2, animations: {
+                    
+                    self.starBtn[i].setBackgroundImage(UIImage(named:"star.png"), for: .normal)
+                }, completion: nil)
+                
             }else{
                 starBtn[i].setBackgroundImage(UIImage(named:"starBlank.png"), for: .normal)
             }
@@ -58,6 +69,8 @@ class ReviewVC: UIViewController, UITextViewDelegate, UIImagePickerControllerDel
     var imageForProject: [UIImage] = [UIImage]()
     internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let selectedImage: UIImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
+                
             photoImg[numOfPic].image = selectedImage
             imageForProject.append(selectedImage)
             numOfPic+=1

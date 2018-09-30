@@ -20,7 +20,7 @@ struct StampSaveService: APIService, RequestService{
     func saveStamp(token: String, stampId: Int, completion: @escaping (String) -> Void, error: @escaping (Int) -> Void) {
         let StampURL = URL + "/\(stampId)"
         let header: HTTPHeaders = [
-            "Authorization" : token,
+            "Authorization" : UserDefaults.standard.string(forKey: "token")! ,
             "Content-Type" : "application/json"
         ]
         postable(StampURL, body: nil, header: header) { (res) in

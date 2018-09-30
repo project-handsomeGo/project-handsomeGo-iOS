@@ -17,7 +17,7 @@ struct RegisterService: APIService {
         
         let URL = url("/comments")
         let header: HTTPHeaders = [
-            "Authorization" : "",
+            "Authorization" : UserDefaults.standard.string(forKey: "token")!,
             "Content-Type" : "application/json"
         ]
         
@@ -33,7 +33,7 @@ struct RegisterService: APIService {
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             for  i in 0 ..< pictures.count{
                 let temp = UIImageJPEGRepresentation(imgData[i], 0.3)
-                multipartFormData.append(temp!, withName: "img", fileName: "img.jpg", mimeType: "img/jpeg")
+                multipartFormData.append(temp!, withName: "pictures", fileName: "pictures.jpg", mimeType: "img/jpeg")
             }
             multipartFormData.append(place_id!, withName: "place_id")
             multipartFormData.append(star!, withName: "star")

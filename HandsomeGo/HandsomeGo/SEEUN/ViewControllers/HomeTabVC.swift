@@ -18,7 +18,6 @@ class HomeTabVC: UIViewController {
     }
     
     var choosedPlace: Place!
-    
     var detailOpened = false {
         didSet {
             mapDetailView.isHidden = !detailOpened
@@ -45,8 +44,10 @@ class HomeTabVC: UIViewController {
     
     // Rank Outlet
     @IBOutlet weak var rankView: UIView!
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var rankTableView: UITableView!
+    
+    
+    let userDefault = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +56,8 @@ class HomeTabVC: UIViewController {
         mapDetailSetup()
         rankSetup()
         setupNaviBar()
+        //
+        
     }
     
     func dataInit() {
@@ -78,7 +81,6 @@ class HomeTabVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         check = true
-        
     }
     
     func setupNaviBar() {
@@ -92,9 +94,6 @@ class HomeTabVC: UIViewController {
     func rankSetup() {
         rankTableView.delegate = self
         rankTableView.dataSource = self
-        
-        imageView.layer.cornerRadius = 8 * self.view.frame.width/375
-        imageView.layer.masksToBounds = true
         
         rankUnderBar.isHidden = true
         rankView.isHidden = true
@@ -128,7 +127,8 @@ class HomeTabVC: UIViewController {
     }
     
     @IBAction func mapIconTapAction(_ sender: UIButton) {
-        detailOpened = true
+           self.detailOpened = true
+        
         detailImageView.image = sender.currentImage
         
         PlaceService.shareInstance.getPlace(placeId: sender.tag, completion: { (place) in
@@ -149,6 +149,8 @@ class HomeTabVC: UIViewController {
     @objc func dismissView() {
         detailOpened = false
     }
+    
+    
 }
 
 
@@ -156,9 +158,7 @@ extension HomeTabVC: UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return self.mapView
     }
-    
     func mapSetup() {
-        
         mapDetailView.isHidden = true
         
         let detailViewDismiss = UITapGestureRecognizer(target: self, action: #selector(dismissView))
@@ -169,7 +169,6 @@ extension HomeTabVC: UIScrollViewDelegate {
         mapScrollView.minimumZoomScale = 1.0
         mapScrollView.maximumZoomScale = 3.0
         mapScrollView.contentOffset = CGPoint(x: 74, y: 0)
-        
     }
     
     func mapDetailSetup(){
@@ -185,6 +184,8 @@ extension HomeTabVC: UIScrollViewDelegate {
 
 }
 
+//var place : RankPlace!
+
 extension HomeTabVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -192,13 +193,10 @@ extension HomeTabVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let place = rankingList[indexPath.row]
+       let place = rankingList[indexPath.row]
+        
         var cell: RankCell!
         
-        
-        
-        
-       
         if indexPath.row == 0 {
             cell = rankTableView.dequeueReusableCell(withIdentifier: "1stCell", for: indexPath) as! RankCell
             
@@ -224,4 +222,18 @@ extension HomeTabVC: UITableViewDelegate, UITableViewDataSource {
         return cell
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // next view
+        PlaceService.shareInstance.getPlace(placeId: rankingList[indexPath.row].placeID, completion: { (place) in
+            self.choosedPlace = place
+            
+            let naviVc = UIStoryboard(name: "Place", bundle:nil ).instantiateViewController(withIdentifier: "PlaceNC") as! PlaceNC
+            let vc = naviVc.viewControllers.first as! PlaceVC
+            vc.tempPlace = self.choosedPlace
+            self.present(naviVc, animated: true, completion: nil)
+        }) { (err) in
+        }
+    }
+    
 }

@@ -17,4 +17,14 @@ class ReviewCVC: UICollectionViewCell {
     @IBOutlet var starImg: [UIImageView]!
     @IBOutlet var photoImg: [UIImageView]!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        for i in 0...3{
+            photoImg[i].layer.cornerRadius = 5
+            photoImg[i].layer.masksToBounds = true
+            
+        }
+    }
+    
 }

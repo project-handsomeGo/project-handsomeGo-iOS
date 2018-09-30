@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class PlaceVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+class PlaceVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate{
 
     var tempPlace: Place!
     var tempToken =  UserDefaults.standard.string(forKey: "token")
@@ -30,19 +30,70 @@ class PlaceVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
     @IBOutlet weak var moreBtnH: NSLayoutConstraint!
     @IBOutlet weak var moreBtnView: UIView!
     
+    @IBOutlet weak var reviewGoStarView: UIView!
+    @IBOutlet weak var reviewStempLabel: UILabel!
+    @IBOutlet weak var loginGoBtn: UIButton!
+    @IBOutlet weak var reviewGoLabel: UILabel!
+    @IBOutlet weak var reviewGoBtn: UIButton!
     @IBOutlet weak var reviewGoBtnH: NSLayoutConstraint!
     @IBOutlet weak var reviewGoBtnView: UIView!
+    
+    let userDefault = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         funcForView()
         funcForDataUpload()
+        mainScrollView.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        funcForView()
+        funcForDataUpload()
+    }
+    
+    //
+    @IBOutlet weak var mainScrollView: UIScrollView!
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (scrollView == mainScrollView){
+            
+            var offset = scrollView.contentOffset.y / 150
+            if offset > 1{
+                offset = 1
+                let color = UIColor(red:1, green:1, blue:1, alpha: offset)
+                self.navigationController?.navigationBar.tintColor = UIColor.black
+                self.navigationController?.navigationBar.backgroundColor = color
+                UIApplication.shared.statusBarView?.backgroundColor = color
+                
+            }else{
+                
+                let color = UIColor(red:1, green:1, blue:1, alpha: offset)
+                
+                self.navigationController?.navigationBar.tintColor = UIColor(displayP3Red: 100  , green: 100, blue: 100, alpha: 1)
+                    
+                self.navigationController?.navigationBar.backgroundColor = color
+             
+                UIApplication.shared.statusBarView?.backgroundColor = color
+            }
+            
+        }
+    }
+    //
     func funcForView(){
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = false
         self.tabBarController?.tabBar.isHidden = true
+    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.tintColor = .white
         
+        //
+        let leftButtonItem = UIBarButtonItem(image: UIImage(named: "dismissBtn"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(popAction))
+        self.navigationItem.leftBarButtonItem = leftButtonItem
+        
+        
+        
+        //
         let Category = tempPlace?.placeCategory
         if ( Category == "역사 문화"){
             self.categoryColor.backgroundColor = UIColor(red: 251.0/255.0, green: 139.0/255.0, blue: 32.0/255.0, alpha: 1.0)
@@ -53,29 +104,14 @@ class PlaceVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         self.moreBtnView.isHidden = true
         self.moreBtnH.constant = 0
         
-        self.reviewGoBtnH.constant = 95
-        self.reviewGoBtnView.isHidden = false
-        
-        if review == 1{
-            self.reviewGoBtnH.constant = 0
-            self.reviewGoBtnView.isHidden = true
-        }else{
-            reviewGoBtnView.center.x = self.view.frame.width + 30
-            UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 30.0, initialSpringVelocity: 30.0, options: UIViewAnimationOptions.curveEaseOut, animations: ({
-                self.reviewGoBtnView.center.x = self.view.frame.width / 2
-            }), completion: nil)
-            
-            if stemp == 0{
-                // 스테프를 찍어주세오
-            }else if stemp == 1{
-                //별점 평가해주세요
-            }else if stemp == 2{
-                //로그인해주세요
-            }
-        }
     }
-    var stemp = 0
-    var review = 0
+    
+    @objc func popAction(){
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+        self.dismiss(animated: true, completion: nil)
+        
+    }
     
     //data upload
     var tempReviewList : [ReviewList] = [ReviewList]()
@@ -86,7 +122,6 @@ class PlaceVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         self.placeCategory.text = tempPlace?.placeCategory
         self.placeContent.text = tempPlace?.placeContent
         self.placeScore.text = String((tempPlace?.placeStar)!)
-        
         for i in 0...4{
             if i < (tempPlace?.placeStar)! {
                 self.starImg[i].image =  UIImage(named: "starYellow.png")
@@ -94,7 +129,8 @@ class PlaceVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
                 self.starImg[i].image = UIImage(named: "starBlank.png")
             }
         }
-        ReviewService.getReivew(id: (tempPlace?.placeID)!){ (reviewList,status,myComment) in
+        
+        ReviewService.getReivew(id: (tempPlace?.placeID)!){ (reviewList,message, status,myComment) in
             self.tempReviewList = reviewList
             let count = reviewList.count
             self.placeReviewCount.text = "리뷰 " + String(count) + "개"
@@ -104,18 +140,55 @@ class PlaceVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
             }else if (count == 0){
                 self.reviewCollectionH.constant = 0
             }
-            if (status == "스탬프를 먼저 찎어주세요."){
-                self.stemp = 0
-            }else if (status == "별점을 평가해주세요"){
-                self.stemp = 1
-            }else if (status == "로그인 해주세요."){
-                self.stemp = 1
-            }
-            if (myComment != ""){ // 널이 아니면, 이미 평가했다는것!
-                self.review = 1
+            
+            if myComment != nil{ // 이미 평가함. 뷰 없앰
+                print("my comment nil")
+                self.reviewGoBtnH.constant = 0
+                self.reviewGoBtnView.isHidden = true
+                // 리뷰 처리
+            }else{
+                self.reviewGoBtnH.constant = 95
+                self.reviewGoBtnView.isHidden = false
+                
+                self.reviewGoBtnView.center.x = self.view.frame.width + 30
+                
+                UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 30.0, initialSpringVelocity: 30.0, options: UIViewAnimationOptions.curveEaseOut, animations: ({
+                    self.reviewGoBtnView.center.x = self.view.frame.width / 2
+                }), completion: nil)
+                
+                
+                self.loginGoBtn.isHidden = true
+                self.reviewGoBtn.isEnabled = false
+                self.reviewGoBtn.isHidden = true
+                self.reviewStempLabel.isHidden = true
+                self.reviewGoStarView.isHidden = true
+                
+                if message == "로그인 해주세요."{ // 로그인 안함
+                    self.loginGoBtn.isHidden = false
+                    self.reviewGoLabel.text = "로그인 후 이용가능합니다"
+                }else{
+                    print(status)
+                    if status == "스탬프를 먼저 찍어주세요"{
+                        self.reviewGoLabel.text =  status
+                        self.reviewStempLabel.isHidden = false
+                    }else{ // 평가해주세요
+                        self.reviewGoLabel.text = message
+                        self.reviewGoBtn.isEnabled = true
+                        self.reviewGoBtn.isHidden = false
+                        self.reviewGoStarView.isHidden = false
+                    }
+                }
             }
             self.reviewCollection.reloadData()
         }
+    }
+    
+    // 초기화
+    @IBAction func loginGoBtnAct(_ sender: UIButton) {
+           let storyboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+          let vc = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+           self.present(vc, animated: true,completion: nil)
+        
     }
     
     // collection view
@@ -124,16 +197,15 @@ class PlaceVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReviewCVC", for: indexPath) as! ReviewCVC
+
         cell.reviewName.text = self.tempReviewList[indexPath.row].writer_name
         
-        //
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.sssZ"
         dateFormatter.timeZone = TimeZone.current
         let originDate = dateFormatter.date(from: self.tempReviewList[indexPath.row].comment_date)
         dateFormatter.dateFormat = "yyyy.MM.dd"
         cell.reviewDate.text = dateFormatter.string(from: originDate!)
-        //
         
         cell.reviewComment.text = self.tempReviewList[indexPath.row].comment_comment!
         for i in 0...4{
@@ -143,6 +215,8 @@ class PlaceVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
                 cell.starImg[i].image = UIImage(named: "starBlank.png")
             }
         }
+        
+        
          cell.photoImg[0].imageFromUrl(self.tempReviewList[indexPath.row].comment_pic1, defaultImgPath: "")
         cell.photoImg[1].imageFromUrl(self.tempReviewList[indexPath.row].comment_pic2, defaultImgPath: "")
         cell.photoImg[2].imageFromUrl(self.tempReviewList[indexPath.row].comment_pic3, defaultImgPath: "")
@@ -167,7 +241,7 @@ class PlaceVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
     var count = 1
     @IBAction func moreBtnAt(_ sender: UIButton) {
         if count < self.tempReviewList.count{
-        self.reviewCollectionH.constant += 250
+        self.reviewCollectionH.constant += 255
         }
         count += 1
     }

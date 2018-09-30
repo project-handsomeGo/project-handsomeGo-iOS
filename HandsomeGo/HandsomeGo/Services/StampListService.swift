@@ -18,7 +18,7 @@ struct StampListService: APIService, RequestService{
     func getStampList(token: String, completion: @escaping ([StampPlace]) -> Void, error: @escaping (Int) -> Void) {
         
         let header: HTTPHeaders = [
-            "Authorization" : token,
+            "Authorization" : UserDefaults.standard.string(forKey: "token")! ,
             "Content-Type" : "application/json"
         ]
         gettable(URL, body: nil, header: header) { res in

@@ -21,6 +21,8 @@
 		94606045215C313C001E6E18 /* ReviewCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94606044215C313C001E6E18 /* ReviewCVC.swift */; };
 		94606047215C65B3001E6E18 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94606046215C65B3001E6E18 /* KakaoOpenSDK.framework */; };
 		9460604A215C73C3001E6E18 /* KakaoCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94606049215C73C3001E6E18 /* KakaoCommon.framework */; };
+		94606050215E908F001E6E18 /* handsomego_splash.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9460604F215E908F001E6E18 /* handsomego_splash.gif */; };
+		94606052215E910E001E6E18 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94606051215E910E001E6E18 /* LaunchViewController.swift */; };
 		CB056815214B98BC00323BFF /* StampCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB056814214B98BC00323BFF /* StampCell.swift */; };
 		CB056824214BA7CE00323BFF /* NanumSquareOTFRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB056821214BA7CA00323BFF /* NanumSquareOTFRegular.otf */; };
 		CB056825214BA7CE00323BFF /* NanumSquareOTFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB056822214BA7CB00323BFF /* NanumSquareOTFBold.otf */; };
@@ -57,6 +59,7 @@
 		CB564D9F2146645400E54961 /* RankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D9E2146645400E54961 /* RankCell.swift */; };
 		CB564DCA2146D4E200E54961 /* MyPageTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564DC92146D4E200E54961 /* MyPageTabVC.swift */; };
 		CB5B3507215BFBBC008C97D1 /* PlaceInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5B3506215BFBBC008C97D1 /* PlaceInfoCell.swift */; };
+		CB6FFFAA216094E500A98AD4 /* StampButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FFFA9216094E500A98AD4 /* StampButtonCell.swift */; };
 		CBD910E1215CB2EF00BEC227 /* StampSaveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD910E0215CB2EF00BEC227 /* StampSaveService.swift */; };
 		CBD910E3215CB9E300BEC227 /* mypageNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD910E2215CB9E300BEC227 /* mypageNaviVC.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +82,8 @@
 		94606046215C65B3001E6E18 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		94606048215C7000001E6E18 /* Bringing-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bringing-Header.h"; sourceTree = "<group>"; };
 		94606049215C73C3001E6E18 /* KakaoCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoCommon.framework; sourceTree = "<group>"; };
+		9460604F215E908F001E6E18 /* handsomego_splash.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = handsomego_splash.gif; sourceTree = "<group>"; };
+		94606051215E910E001E6E18 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		CB056814214B98BC00323BFF /* StampCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampCell.swift; sourceTree = "<group>"; };
 		CB056821214BA7CA00323BFF /* NanumSquareOTFRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFRegular.otf; sourceTree = "<group>"; };
 		CB056822214BA7CB00323BFF /* NanumSquareOTFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFBold.otf; sourceTree = "<group>"; };
@@ -117,6 +122,7 @@
 		CB564D9E2146645400E54961 /* RankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCell.swift; sourceTree = "<group>"; };
 		CB564DC92146D4E200E54961 /* MyPageTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTabVC.swift; sourceTree = "<group>"; };
 		CB5B3506215BFBBC008C97D1 /* PlaceInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoCell.swift; sourceTree = "<group>"; };
+		CB6FFFA9216094E500A98AD4 /* StampButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampButtonCell.swift; sourceTree = "<group>"; };
 		CBD910E0215CB2EF00BEC227 /* StampSaveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampSaveService.swift; sourceTree = "<group>"; };
 		CBD910E2215CB9E300BEC227 /* mypageNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mypageNaviVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,12 +155,14 @@
 			children = (
 				9460603A215C2EA5001E6E18 /* Service,Model */,
 				9460602E215C2DF3001E6E18 /* Login.storyboard */,
-				9460603F215C2EE6001E6E18 /* LoginVC.swift */,
 				94606030215C2DFB001E6E18 /* Place.storyboard */,
+				9460603F215C2EE6001E6E18 /* LoginVC.swift */,
 				9460603B215C2EC7001E6E18 /* PlaceVC.swift */,
 				9460603D215C2ED6001E6E18 /* ReviewVC.swift */,
 				94606042215C3115001E6E18 /* PlaceNC.swift */,
 				94606044215C313C001E6E18 /* ReviewCVC.swift */,
+				9460604F215E908F001E6E18 /* handsomego_splash.gif */,
+				94606051215E910E001E6E18 /* LaunchViewController.swift */,
 			);
 			path = YEWON;
 			sourceTree = "<group>";
@@ -292,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				CB564D9E2146645400E54961 /* RankCell.swift */,
+				CB6FFFA9216094E500A98AD4 /* StampButtonCell.swift */,
 				CB056827214BB61D00323BFF /* StampListCell.swift */,
 				CB056814214B98BC00323BFF /* StampCell.swift */,
 				CB05682B214BBE1000323BFF /* InfoCell.swift */,
@@ -376,6 +385,7 @@
 				9460602F215C2DF3001E6E18 /* Login.storyboard in Resources */,
 				CB056824214BA7CE00323BFF /* NanumSquareOTFRegular.otf in Resources */,
 				94606031215C2DFB001E6E18 /* Place.storyboard in Resources */,
+				94606050215E908F001E6E18 /* handsomego_splash.gif in Resources */,
 				CB056825214BA7CE00323BFF /* NanumSquareOTFBold.otf in Resources */,
 				CB056826214BA7CE00323BFF /* NanumSquareOTFExtraBold.otf in Resources */,
 				CB564D86213EB1D400E54961 /* Main.storyboard in Resources */,
@@ -394,12 +404,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-HandsomeGo/Pods-HandsomeGo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +450,7 @@
 				CB056828214BB61D00323BFF /* StampListCell.swift in Sources */,
 				CB05684E2157EE0E00323BFF /* StampListService.swift in Sources */,
 				CB0568312157A76C00323BFF /* APIServices.swift in Sources */,
+				CB6FFFAA216094E500A98AD4 /* StampButtonCell.swift in Sources */,
 				CB056854215A291300323BFF /* StampStatusData.swift in Sources */,
 				CB0568332157A79A00323BFF /* RankListService.swift in Sources */,
 				CB5B3507215BFBBC008C97D1 /* PlaceInfoCell.swift in Sources */,
@@ -451,6 +464,7 @@
 				94606039215C2E6E001E6E18 /* RegisterService.swift in Sources */,
 				9460603C215C2EC7001E6E18 /* PlaceVC.swift in Sources */,
 				CB564D97213ECCC200E54961 /* QRcodeTabVC.swift in Sources */,
+				94606052215E910E001E6E18 /* LaunchViewController.swift in Sources */,
 				CB39B088215BE0C100446F6E /* placeNaviVC.swift in Sources */,
 				CB05683C2157A89200323BFF /* ResponseData.swift in Sources */,
 				CB0568422157C00C00323BFF /* RankListData.swift in Sources */,

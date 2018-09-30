@@ -13,15 +13,14 @@ import SwiftyJSON
 import UIKit
 
 struct ReviewService:APIService {
-    static func getReivew(id:Int, completion: @escaping ([ReviewList], String, String)->Void){
+    static func getReivew(id:Int, completion: @escaping ([ReviewList],String, String, [ReviewList]?)->Void){
         let URL = url("/places/\(id)/comments")
         
         let header: HTTPHeaders = [
-            "Authorization" : UserDefaults.standard.string(forKey: "token") ?? "",
+            "Authorization" : UserDefaults.standard.string(forKey: "token")! ,
             "Content-Type" : "application/json"
         ]
-        
-        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseData() {res in
+                Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseData() {res in
             switch res.result{
             case .success:
                 if let value = res.result.value{
@@ -29,7 +28,7 @@ struct ReviewService:APIService {
                     do{
                         let data = try decoder.decode(ReviewResponse.self, from: value)
                         if data.message == "Successful Get Comment List Data"{
-                            completion(data.data.comments, data.data.status!, data.data.myComment ?? "")
+                            completion(data.data.comments, data.data.message ?? "", data.data.status ?? "", data.data.myComment)
                         }
                     }catch{print("decoding err")}
                 }

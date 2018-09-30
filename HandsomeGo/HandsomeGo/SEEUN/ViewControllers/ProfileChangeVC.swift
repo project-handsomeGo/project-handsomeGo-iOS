@@ -13,7 +13,7 @@ class ProfileChangeVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameTxfd: UITextField!
     let imagePicker : UIImagePickerController = UIImagePickerController()
-    let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0MiwiaWF0IjoxNTM3MzYxNDI1LCJleHAiOjE1Mzk5NTM0MjV9.GNSbBt28VaJPlISjzP82WUhHONpAfR-VgLC84cZxhD0"
+    let token = UserDefaults.standard.string(forKey: "token")!
     
     @IBAction func openGalleryAction(_ sender: UIButton) {
         openGallery()
@@ -37,15 +37,20 @@ class ProfileChangeVC: UIViewController, UITextFieldDelegate {
     func barButtonInit() {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "NanumSquareOTFB", size: 17)!, NSAttributedStringKey.foregroundColor: UIColor.black]
         
-        let backItem = UIBarButtonItem()
-        backItem.title = ""
-        self.navigationItem.backBarButtonItem = backItem
+        let leftButtonItem = UIBarButtonItem(image: UIImage(named: "backBtn"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(popAction))
+        leftButtonItem.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem = leftButtonItem
         
         let button = UIBarButtonItem(title: "확인", style: .plain, target: self, action: #selector(saveAction))
         button.setTitleTextAttributes( [NSAttributedStringKey.font: UIFont(name: "NanumSquareOTFR", size: 15)!, NSAttributedStringKey.foregroundColor: UIColor.black], for: .normal)
         self.navigationItem.rightBarButtonItem = button
         
         
+    }
+    
+    @objc func popAction(){
+        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.popViewController(animated: true)
     }
     
     func dataInit() {

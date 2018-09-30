@@ -15,7 +15,7 @@ extension UIImageView {
         let defaultImg = UIImage(named: defaultImgPath)
         if let url = urlString {
             if url.isEmpty {
-                self.image = defaultImg
+                self.image = UIImage(named: "profileImg")
             } else {
                 self.kf.setImage(with: URL(string: url), placeholder: defaultImg, options: [.transition(ImageTransition.fade(0.5))])
             }
