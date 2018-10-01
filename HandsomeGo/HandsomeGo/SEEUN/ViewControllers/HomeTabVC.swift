@@ -111,6 +111,35 @@ class HomeTabVC: UIViewController {
         self.present(naviVc, animated: true, completion: nil)
     }
 
+    @IBAction func randomPlaceAction(_ sender: UIButton) {
+        
+        let currentDateTime = Date()
+        let userCalendar = Calendar.current
+        let requestedComponents: Set<Calendar.Component> = [
+            .day,
+            ]
+        let dateTimeComponents = userCalendar.dateComponents(requestedComponents, from: currentDateTime)
+        guard let day = dateTimeComponents.day else {return}
+        var randomNum = 1
+        if day%21 > 0 {
+            randomNum = day%21
+        }
+        
+        PlaceService.shareInstance.getPlace(placeId: randomNum, completion: { (place) in
+            
+            let naviVc = UIStoryboard(name: "Place", bundle:nil ).instantiateViewController(withIdentifier: "PlaceNC") as! PlaceNC
+            let vc = naviVc.viewControllers.first as! PlaceVC
+            vc.tempPlace = place
+            self.present(naviVc, animated: true, completion: nil)
+        }) { (err) in
+            let message = UIAlertController(title: "알림", message: "네트워크 연결상태를 확인하세요", preferredStyle: .alert)
+            let ok = UIAlertAction(title:"확인", style: UIAlertActionStyle.default){
+                (UIAlertAction) in
+            }
+            message.addAction(ok)
+            self.present(message, animated: true, completion: nil)
+        }
+    }
     @IBAction func mapTapAction(_ sender: UIButton) {
         
         rankUnderBar.isHidden = true

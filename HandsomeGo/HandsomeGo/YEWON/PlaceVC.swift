@@ -88,7 +88,7 @@ class PlaceVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         self.navigationController?.navigationBar.tintColor = .white
         
         //
-        let leftButtonItem = UIBarButtonItem(image: UIImage(named: "dismissBtn"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(popAction))
+        let leftButtonItem = UIBarButtonItem(image: UIImage(named: "icDismiss"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(popAction))
         self.navigationItem.leftBarButtonItem = leftButtonItem
         
         

@@ -90,6 +90,8 @@ class SimpleInfoVC: UIViewController {
                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
                 vc.selectedIndex = 2
+                let navi = vc.childViewControllers[2] as! mypageNaviVC
+                navi.opened = true
                 self.present(vc, animated: false, completion: nil)
                 
             }

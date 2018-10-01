@@ -36,21 +36,12 @@ class ProfileChangeVC: UIViewController, UITextFieldDelegate {
     
     func barButtonInit() {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "NanumSquareOTFB", size: 17)!, NSAttributedStringKey.foregroundColor: UIColor.black]
-        
-        let leftButtonItem = UIBarButtonItem(image: UIImage(named: "backBtn"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(popAction))
-        leftButtonItem.tintColor = UIColor.black
-        self.navigationItem.leftBarButtonItem = leftButtonItem
-        
+
         let button = UIBarButtonItem(title: "확인", style: .plain, target: self, action: #selector(saveAction))
         button.setTitleTextAttributes( [NSAttributedStringKey.font: UIFont(name: "NanumSquareOTFR", size: 15)!, NSAttributedStringKey.foregroundColor: UIColor.black], for: .normal)
         self.navigationItem.rightBarButtonItem = button
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
-        
-    }
-    
-    @objc func popAction(){
-        self.navigationController?.isNavigationBarHidden = true
-        self.navigationController?.popViewController(animated: true)
     }
     
     func dataInit() {

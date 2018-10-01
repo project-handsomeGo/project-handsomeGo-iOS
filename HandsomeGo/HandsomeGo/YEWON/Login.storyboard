@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eC-a1-o5P">
-                                <rect key="frame" x="87.5" y="350.5" width="200" height="40"/>
+                                <rect key="frame" x="87.5" y="342.5" width="200" height="40"/>
                                 <state key="normal" image="kakaoLoginBtn"/>
                                 <connections>
                                     <action selector="kakaoBtnAct:" destination="b6X-RJ-qx1" eventType="touchUpInside" id="9dN-pK-wcv"/>
@@ -59,7 +59,7 @@
                             <constraint firstItem="xsK-ZI-Yts" firstAttribute="centerX" secondItem="X3r-ch-5nf" secondAttribute="centerX" id="N8x-8b-Qgg"/>
                             <constraint firstItem="2eC-a1-o5P" firstAttribute="width" secondItem="xsK-ZI-Yts" secondAttribute="width" id="YtC-h9-NIH"/>
                             <constraint firstItem="2eC-a1-o5P" firstAttribute="height" secondItem="xsK-ZI-Yts" secondAttribute="height" id="ZeA-VE-XW1"/>
-                            <constraint firstItem="2eC-a1-o5P" firstAttribute="centerY" secondItem="X3r-ch-5nf" secondAttribute="centerY" multiplier="1:0.9" id="aIC-Nb-psH"/>
+                            <constraint firstItem="2eC-a1-o5P" firstAttribute="centerY" secondItem="X3r-ch-5nf" secondAttribute="centerY" multiplier="1:0.92" id="aIC-Nb-psH"/>
                             <constraint firstItem="5AD-2I-UHK" firstAttribute="leading" secondItem="OkF-z5-ruE" secondAttribute="leading" id="bgE-Lt-Sff"/>
                             <constraint firstItem="5AD-2I-UHK" firstAttribute="top" secondItem="X3r-ch-5nf" secondAttribute="top" id="dVF-5m-oCO"/>
                             <constraint firstItem="OGl-XO-xim" firstAttribute="width" secondItem="5AD-2I-UHK" secondAttribute="width" multiplier="120:375" id="fTW-tr-KPl"/>

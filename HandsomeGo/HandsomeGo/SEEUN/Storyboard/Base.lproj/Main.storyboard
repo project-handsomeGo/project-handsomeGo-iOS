@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,7 +29,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gek-dR-WDv">
-                                <rect key="frame" x="15" y="20" width="28" height="28"/>
+                                <rect key="frame" x="15" y="30" width="28" height="28"/>
                                 <state key="normal" image="icDismiss"/>
                                 <connections>
                                     <action selector="cancelAction:" destination="Xjq-bc-Z93" eventType="touchUpInside" id="cgy-YR-XOe"/>
@@ -47,7 +46,7 @@
                         <constraints>
                             <constraint firstItem="VfT-7b-4qU" firstAttribute="top" secondItem="wZP-B5-Wg2" secondAttribute="top" constant="50" id="LMJ-Kq-7jH"/>
                             <constraint firstItem="gek-dR-WDv" firstAttribute="leading" secondItem="wZP-B5-Wg2" secondAttribute="leading" constant="15" id="kGn-Cu-t3c"/>
-                            <constraint firstItem="gek-dR-WDv" firstAttribute="top" secondItem="wZP-B5-Wg2" secondAttribute="top" id="kMr-l3-3hz"/>
+                            <constraint firstItem="gek-dR-WDv" firstAttribute="top" secondItem="wZP-B5-Wg2" secondAttribute="top" constant="10" id="kMr-l3-3hz"/>
                             <constraint firstItem="VfT-7b-4qU" firstAttribute="centerX" secondItem="Pq0-JZ-ykr" secondAttribute="centerX" id="siq-oX-qGb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wZP-B5-Wg2"/>
@@ -165,14 +164,6 @@
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egm-A0-Gjy">
-                                                    <rect key="frame" x="20" y="16" width="28" height="28"/>
-                                                    <state key="normal" image="icDismiss"/>
-                                                    <connections>
-                                                        <action selector="cancelAction:" destination="Xjq-bc-Z93" eventType="touchUpInside" id="r2s-8r-OtS"/>
-                                                        <action selector="dismissAction:" destination="S9M-ul-hge" eventType="touchUpInside" id="rLD-UV-5I8"/>
-                                                    </connections>
-                                                </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="infoBlueBar" translatesAutoresizingMaskIntoConstraints="NO" id="tCD-Lm-nN0">
                                                     <rect key="frame" x="15" y="271" width="11" height="53"/>
                                                 </imageView>
@@ -180,7 +171,6 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="gqZ-63-S49" secondAttribute="bottom" id="0uu-kJ-iwE"/>
                                                 <constraint firstAttribute="trailing" secondItem="7DD-3Z-n8o" secondAttribute="trailing" id="0uw-0u-bsM"/>
-                                                <constraint firstItem="egm-A0-Gjy" firstAttribute="top" secondItem="dp0-fd-drH" secondAttribute="topMargin" constant="5" id="9xf-16-dwn"/>
                                                 <constraint firstItem="06B-z7-WTO" firstAttribute="leading" secondItem="qkQ-qe-8pX" secondAttribute="leading" constant="14" id="AeC-3Y-aDU"/>
                                                 <constraint firstItem="deT-oN-GgB" firstAttribute="top" secondItem="7DD-3Z-n8o" secondAttribute="bottom" id="BBP-IV-H4Z"/>
                                                 <constraint firstItem="7DD-3Z-n8o" firstAttribute="top" secondItem="qkQ-qe-8pX" secondAttribute="bottom" constant="7" id="Cp8-A1-DDe"/>
@@ -196,7 +186,6 @@
                                                 <constraint firstItem="7DD-3Z-n8o" firstAttribute="leading" secondItem="dp0-fd-drH" secondAttribute="leading" id="jQj-ok-Bqq"/>
                                                 <constraint firstItem="7ET-ea-T58" firstAttribute="bottom" secondItem="qkQ-qe-8pX" secondAttribute="bottom" constant="-19" id="n7D-4T-cNj"/>
                                                 <constraint firstItem="qkQ-qe-8pX" firstAttribute="leading" secondItem="dp0-fd-drH" secondAttribute="leading" id="slE-Ym-kpt"/>
-                                                <constraint firstItem="egm-A0-Gjy" firstAttribute="leading" secondItem="dp0-fd-drH" secondAttribute="leadingMargin" constant="5" id="tSh-93-iMv"/>
                                                 <constraint firstAttribute="trailing" secondItem="qkQ-qe-8pX" secondAttribute="trailing" id="tSt-UD-45T"/>
                                                 <constraint firstItem="deT-oN-GgB" firstAttribute="leading" secondItem="dp0-fd-drH" secondAttribute="leading" id="w8t-3x-pak"/>
                                                 <constraint firstItem="qkQ-qe-8pX" firstAttribute="width" secondItem="qkQ-qe-8pX" secondAttribute="height" multiplier="125:89" id="yop-3E-fWI"/>
@@ -214,6 +203,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egm-A0-Gjy">
+                                <rect key="frame" x="15" y="74" width="28" height="28"/>
+                                <state key="normal" image="icDismiss"/>
+                                <connections>
+                                    <action selector="cancelAction:" destination="Xjq-bc-Z93" eventType="touchUpInside" id="r2s-8r-OtS"/>
+                                    <action selector="dismissAction:" destination="S9M-ul-hge" eventType="touchUpInside" id="rLD-UV-5I8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -222,6 +219,8 @@
                             <constraint firstAttribute="trailing" secondItem="PLb-lS-Ldl" secondAttribute="trailing" id="DvL-cZ-uZm"/>
                             <constraint firstItem="3kA-eb-uGS" firstAttribute="trailing" secondItem="tlg-jL-FkH" secondAttribute="trailing" id="IAM-wg-0Iy"/>
                             <constraint firstItem="PLb-lS-Ldl" firstAttribute="width" secondItem="PLb-lS-Ldl" secondAttribute="height" multiplier="375:53" id="Woy-zP-cXP"/>
+                            <constraint firstItem="egm-A0-Gjy" firstAttribute="top" secondItem="3kA-eb-uGS" secondAttribute="top" constant="10" id="bRM-iu-SbU"/>
+                            <constraint firstItem="egm-A0-Gjy" firstAttribute="leading" secondItem="3kA-eb-uGS" secondAttribute="leading" constant="15" id="owb-Cw-W4B"/>
                             <constraint firstItem="tlg-jL-FkH" firstAttribute="leading" secondItem="3kA-eb-uGS" secondAttribute="leading" id="pHa-z7-9ZQ"/>
                             <constraint firstItem="PLb-lS-Ldl" firstAttribute="leading" secondItem="3kA-eb-uGS" secondAttribute="leading" id="ryq-g6-vAM"/>
                             <constraint firstItem="3kA-eb-uGS" firstAttribute="bottom" secondItem="PLb-lS-Ldl" secondAttribute="bottom" id="wV3-5M-AJJ"/>
@@ -765,6 +764,9 @@
                                             <constraint firstAttribute="width" secondItem="T9K-jJ-FWk" secondAttribute="height" multiplier="361:102" id="hQs-MB-GBG"/>
                                         </constraints>
                                         <state key="normal" image="bannerImg"/>
+                                        <connections>
+                                            <action selector="randomPlaceAction:" destination="BSB-t0-zTx" eventType="touchUpInside" id="wf7-xU-BPM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
