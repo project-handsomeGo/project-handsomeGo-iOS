@@ -13,6 +13,6 @@ protocol APIService {
 
 extension APIService {
     static func url(_ path: String) -> String {
-        return "http://bghgu.tk:3000/api" + path
+        return "http://bghgu.tk:3010/api" + path
     }
 }
